@@ -6,7 +6,7 @@
 3. Apply Custom Domain
 
 ### Framework
-1. Html / Css
+1. HTML / CSs
 2. Javascript
 
 ## Requirements:
