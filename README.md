@@ -8,11 +8,13 @@
 ## Requirements:
 
 1. No "About Us"
-2. Gallery From Promo Photos (Uploaded by Tony) option 1: If given a description or menu: Then Make a descriptive menu option 2: If not, simply attach photos
+2. Gallery From Promo Photos (Uploaded by Tony)
+Option 1: If given a description or menu: Then Make a descriptive menu
+Option 2: If not, simply attach photos
 
 
 
 
 
 
-3. "Order now" on the main page clearly visible
+4. "Order now" on the main page clearly visible
