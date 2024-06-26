@@ -12,17 +12,16 @@
 Option 1: If given a description or menu: Then Make a descriptive menu
 Option 2: If not, simply attach photos
 
-## Promotional photos
-arriving tongiht
+3. "Order now" on the main page clearly visible
 
 
-
-
-
-
-4. "Order now" on the main page clearly visible
 
 
 ## Deadline:
 
 30th of June
+
+
+## Promotional Photos
+
+Arrives 27th of June PM
