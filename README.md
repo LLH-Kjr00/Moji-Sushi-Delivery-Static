@@ -18,3 +18,8 @@ Option 2: If not, simply attach photos
 
 
 4. "Order now" on the main page clearly visible
+
+
+## Deadline:
+
+30th of June
