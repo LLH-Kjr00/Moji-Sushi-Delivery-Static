@@ -1,2 +1,10 @@
 # Moji Sushi Delivery Static
-Development for M&amp;P Service
+
+Work-flow:
+1. Create the Static Page
+2. Upload to Github Pages
+3. Apply Custom Domain
+
+Requirements:
+
+# TODO (TONY)
