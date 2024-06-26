@@ -5,6 +5,10 @@
 2. Upload to Github Pages
 3. Apply Custom Domain
 
+### Framework
+1. Html / Css
+2. Javascript
+
 ## Requirements:
 
 1. No "About Us"
