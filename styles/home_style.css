@@ -23,14 +23,16 @@
 }*/
 
 .text {
-    font-size: 30px;
+    
     color: white;
     padding-bottom: 3vh;
     padding-top: 10vh;
 }
 
 .text .title{
+    font-family: "paint";
     padding-bottom: 2vh;
+    font-size: 50px;
 }
 .text .motto{
     padding-bottom: 2vh;
@@ -67,4 +69,9 @@ header {
     padding-left:20px;
     padding-top:5px;
     padding-bottom: 5px;
+}
+
+@font-face{
+    font-family: "paint";
+    src:url("../assets/PAINP___.TTF") format('truetype')
 }
