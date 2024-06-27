@@ -45,12 +45,11 @@
     cursor: pointer;
     padding: 10px 25px 10px;
     transition: 0.5s;
-    font-size: 16px;
     position: absolute;
     border-radius: 15%;
     border-color: black;
     top: 65%;
-    left: 45%;
+    left: 44.5%;
     font-size: 2vw;
 }
 
