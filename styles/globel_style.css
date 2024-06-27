@@ -32,12 +32,3 @@ header .order:hover {
 
 
 
-@keyframes transitionIn_container {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
