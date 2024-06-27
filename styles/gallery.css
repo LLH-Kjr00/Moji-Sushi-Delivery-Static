@@ -7,12 +7,12 @@
 body{
     overflow:hidden
 }
-.logo_div{
-    padding:10px;
-}
+
 .logo{
-    height: 60px;
-    width:60px;
+    height: 70px;
+    width: 70px;
+    margin-top:5px;
+    margin-bottom: 5px;
 }
 header{
     display: flex;
