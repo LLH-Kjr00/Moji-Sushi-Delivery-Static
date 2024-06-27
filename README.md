@@ -28,4 +28,4 @@ Option 2: If not, simply attach photos
 
 ## Promotional Photos
 
-Arrives 27th of June PM
+Arrives 27th of June PM (Delayed)
