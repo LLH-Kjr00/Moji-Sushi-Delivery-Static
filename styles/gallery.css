@@ -110,3 +110,52 @@ header .order:hover{
 }
 
 
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:250px;
+    z-index:10;
+    background-color:rgb(40, 55, 71, 0.8);
+    backdrop-filter: blur(10px);
+    display:flex;
+    flex-direction: column;
+}
+
+.sidebar li{
+    list-style: none;
+    height:70px;
+    font-size: 16px;
+    justify-content: flex-start;
+    width:100%;
+}
+.sidebar li a{
+    height:100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    color:white;
+    transition: 0.2s;
+}
+.sidebar li button{
+    height:100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    color:white;
+    background:none;
+    border: none;
+    cursor:pointer;
+    transition: 0.5s;
+    font-size:16px;
+}
+.sidebar li{
+    transition: 0.5s
+}
+.sidebar li:hover{
+    background-color: rgb(83, 133, 133);
+    
+}
