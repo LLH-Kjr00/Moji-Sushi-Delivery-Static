@@ -5,6 +5,10 @@
 2. Upload to Github Pages
 3. Apply Custom Domain
 
+## Framework (Tentative)
+1. HTML / CSS
+2. Javascript
+
 ## Requirements:
 
 1. No "About Us"
@@ -14,10 +18,21 @@ Option 2: If not, simply attach photos
 
 3. "Order now" on the main page clearly visible
 
+<<<<<<< HEAD
 4. Web font: https://fonts.google.com/selection/embed
+=======
+
+>>>>>>> main
 
 
 ## Deadline:
 
 30th of June
 
+<<<<<<< HEAD
+=======
+
+## Promotional Photos
+
+Arrives 27th of June PM (Delayed)
+>>>>>>> main
