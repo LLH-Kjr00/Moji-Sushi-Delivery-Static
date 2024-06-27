@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/globel_style.css">
+    <!--<link rel="stylesheet" href="./styles/globel_style.css">-->
     <link rel="stylesheet" href="./styles/home_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +13,7 @@
 <body>
     <header>
         
-            <img class="logo_pic" src="./assets/logo.png">
-        
+        <img class="logo_pic" src="./assets/logo.png">
         <nav>
             <ul class="nav_links">
                 <li><a href="./index.html">Home</a></li>
@@ -22,6 +21,13 @@
                 <li><button class="contact">Contact</button></li>
             </ul>
         </nav>
+        <img class = "side_icon" src = "assets/sidebar.png" onclick = showSidebar()>
+        <ul class = "sidebar">
+            <img class = "cancel_icon" src = "assets/cancel.png" onclick = hideSidebar()>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><button class = "contact">Contact</button></li>
+        </ul>
     </header>
     <div class="container">
        
@@ -40,3 +46,16 @@
 </body>
 
 </html>
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = "flex"
+        
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = "none"
+        
+    }
+</script>
