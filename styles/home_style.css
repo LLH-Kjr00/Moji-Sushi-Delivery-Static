@@ -4,7 +4,16 @@
     box-sizing: border-box;
 }
 body {
+    z-index:10;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: 
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg")
 }
 
 .container{
@@ -17,13 +26,23 @@ body {
     height:100vh;
     padding-left: 10px;
     padding-right: 10px;
+    z-index:10;
+    /*
     background-size: cover;
     background-position: center;
-    background-image: url("../assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg");
+    background-image: 
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg");
+    */
 }
 header {
     display: flex;
-    background-color: rgb(54, 80, 80);
+    background-color: transparent;
+    /*background-color: rgb(54, 80, 80);*/
+    /*background-color: rgb(40, 55, 71);*/
     justify-content: space-between;
     width: 100%;
     padding-left: 60px;
@@ -31,6 +50,9 @@ header {
     align-items: center;
     font-size: 16px;
     overflow: hidden;
+    /*backdrop-filter: blur(70px);*/
+    margin-bottom: 20px;
+    
 }
 
 .logo{
@@ -40,49 +62,56 @@ header {
 }
 
 .text {
-    
     color: white;
     padding-bottom: 3vh;
     padding-top: 10vh;
+    align-items: center;
+    
 }
 
 .text .title{
     font-family: "paint";
     padding-bottom: 2vh;
-    font-size: 65px;
+    font-size: 55px;
+    
 }
 .text .motto{
+    
     padding-bottom: 2vh;
-    font-size: 20px;
-    font-family: arial;
+    font-size: 25px;
+    font-family: "paint";
+    
+    
 }
 .order {
-    border: none;
-    background-color: rgb(61, 167, 167);
+    border: 3px solid rgb(61, 167, 167);
+    /*background-color: rgb(61, 167, 167);*/
+    background-color: transparent;
     cursor: pointer;
     padding: 10px 25px 10px;
     transition: 0.5s;
-    border-radius: 4px;
-    font-family: "arial";
-    font-size: 25px;
+    border-radius: 2px;
+    font-family: "calibri";
+    font-size: 20px;
     color:white;
 }
 
 .order:hover {
-    background-color: rgb(129, 214, 214);
+    background-color: rgb(61, 167, 167);
 }
 
 
 
 .logo_pic{
-    width:70px;
-    height:70px;
+    width:90px;
+    height:90px;
     margin-top:5px;
     margin-bottom: 5px;
     
 }
 nav {
-    background-color: rgb(54, 80, 80);
+    /*background-color: rgb(54, 80, 80);*/
+    background-color: transparent;
 }
 
 nav ul {
@@ -101,8 +130,7 @@ nav li {
     color: white;
     text-decoration: none;
     display: flex;
-
-
+    
 
 }
 
@@ -130,7 +158,8 @@ nav li a {
     color: white;
     cursor: pointer;
     transition: 0.2s;
-
+    font-size: 20px;
+    font-family: "calibri";
 }
 
 nav li button {
@@ -144,7 +173,8 @@ nav li button {
     border: none;
     cursor: pointer;
     transition: 0.5s;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: "calibri";
 }
 
 @font-face{
@@ -160,7 +190,7 @@ nav li button {
     right:0;
     height:100vh;
     width:100vw;
-    z-index:10;
+    z-index:20;
     background-color:rgb(40, 55, 71, 0.8);
     backdrop-filter: blur(10px);
     display:flex;
@@ -184,6 +214,8 @@ nav li button {
     align-items: center;
     color:white;
     transition: 0.2s;
+    font-family: "calibri";
+    font-size: 20px;
 }
 .sidebar li button{
     height:100%;
@@ -196,7 +228,8 @@ nav li button {
     border: none;
     cursor:pointer;
     transition: 0.5s;
-    font-size:16px;
+    font-family: "calibri";
+    font-size: 20px;
 }
 .sidebar li{
     transition: 0.5s
@@ -224,10 +257,13 @@ nav li button {
 @media(max-width: 800px){
     .logo_pic{
         padding-left: 0px;
+        width:70px;
+        height:70px;
     }
     header{
         padding-left: 10px;
         padding-right: 20px;
+        margin-bottom: 0px;
     }
     nav{
         display:none;
@@ -237,5 +273,16 @@ nav li button {
         width:30px;
         height:30px;
         cursor: pointer;
+    }
+
+}
+
+@keyframes transitionIn_container {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
