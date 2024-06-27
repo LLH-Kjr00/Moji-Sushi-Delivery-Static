@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: "Playfair Display", serif;
+}
+body{
+    overflow:hidden
+}
+
+header{
+    display: flex;
+    background-color:rgb(40, 55, 71);
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    align-items: center;
+    font-size:16px;
+}
+
+
+nav{
+    background-color:rgb(40, 55, 71);
+    
+}
+nav ul{
+    
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height:70px;
+    
+}
+nav li a:hover, nav li button:hover{
+    background-color: rgb(83, 133, 133);
+}
+
+.nav_links li a::after{
+    content:'';
+    height:2px;
+    width:100%;
+    background: black;
+    display:block;
+    position:absolute;
+    bottom: -8px
+}
+
+nav li a{
+    height:100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    color:white;
+    transition: 0.2s;
+}
+
+
+
+nav li button{
+    height:100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    color:white;
+    background:none;
+    border: none;
+    cursor:pointer;
+    transition: 0.5s;
+    font-size:16px;
+}
+
+header .order{
+    border:none;
+    background-color: rgb(100, 158, 158);
+    cursor:pointer;
+    padding: 10px 25px 10px;
+    transition:0.5s;
+    color: white;
+    font-size:16px;
+    border-radius: 2px;
+}
+
+header .order:hover{
+    background-color: rgb(129, 214, 214);
+}
+
+.title{
+    width: 100%;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    background-color:white;
+    padding-top: 30px;
+    
+}
+
+.title p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    border-top: 1px solid rgb(129, 214, 214);
+    border-bottom: 1px solid rgb(129, 214, 214);
+}
+
+
