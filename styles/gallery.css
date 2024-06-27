@@ -113,7 +113,7 @@ header .order:hover{
 .sidebar{
     position:fixed;
     top:0;
-    left:0;
+    right:0;
     height:100vh;
     width:250px;
     z-index:10;
@@ -121,6 +121,8 @@ header .order:hover{
     backdrop-filter: blur(10px);
     display:flex;
     flex-direction: column;
+    display:none;
+    transition: 0.5s;
 }
 
 .sidebar li{
@@ -158,4 +160,37 @@ header .order:hover{
 .sidebar li:hover{
     background-color: rgb(83, 133, 133);
     
+}
+
+.side_icon{
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    display:none
+}
+
+.cancel_icon{
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left:10px;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display:none;
+    }
+    .side_icon{
+        display:flex;
+    }
+
+    header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .order{
+        display: none;
+    }
 }

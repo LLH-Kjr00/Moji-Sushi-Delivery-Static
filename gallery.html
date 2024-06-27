@@ -8,18 +8,19 @@
 </head>
 <body>
    <header>
-        
-        
-        <nav>
+        <p>Logo</p>
+        <img class = "side_icon" src = "assets/sidebar.png" onclick = showSidebar()>
+        <nav class="hideOnMobile">
             <ul class = "nav_links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><button class = "contact">Contact</button></li>
             </ul>
         </nav>
-        <p>Logo</p>
+        
         <button class = "order">Order Now</button>
         <ul class = "sidebar">
+            <img class = "cancel_icon" src = "assets/cancel.png" onclick = hideSidebar()>
             <li><a href="#">Home</a></li>
             <li><a href="#">Gallery</a></li>
             <li><button class = "contact">Contact</button></li>
@@ -28,5 +29,19 @@
    <div class = "title">
        <p>Gallery Singles</p> 
    </div>
+
 </body>
 </html>
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = "flex"
+        
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = "none"
+        
+    }
+</script>
