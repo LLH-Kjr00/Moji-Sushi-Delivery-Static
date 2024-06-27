@@ -7,7 +7,13 @@
 body{
     overflow:hidden
 }
-
+.logo_div{
+    padding:10px;
+}
+.logo{
+    height: 60px;
+    width:60px;
+}
 header{
     display: flex;
     background-color:rgb(40, 55, 71);
@@ -184,11 +190,13 @@ header .order:hover{
     }
     .side_icon{
         display:flex;
+        width:30px;
+        height:30px;
     }
 
     header{
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 20px;
     }
     .order{
         display: none;
