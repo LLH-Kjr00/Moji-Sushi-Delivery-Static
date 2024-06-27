@@ -2,34 +2,43 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap');
-    </style>
+    <link rel="stylesheet" href="./styles/globel_style.css">
+    <link rel="stylesheet" href="./styles/home_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="shop_title">
-        <h1>Moji-Sushi-Delivery</h1>
-    </div>
+    <header>
+        <!--<img class="logo_pic" src="./assets/logo.png">-->
+        <nav>
+            <ul class="nav_links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./gallery/gallery.html">Gallery</a></li>
+                <li><button class="contact">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="eye_catcher">
+            <img class="logo_pic" src="./assets/logo.png">
+            <div class="title">
+                <h1>Welcome to </h1>
+                <h1>Moji Sushi Delivery</h1>
+            </div>
+    
+            <div class="moto">
+                <h4>This is How we Roll</h4>
+            </div>
+        </div>
 
-    <div class="main_menu">
-        <ul>
-            <li>
-                <h3 id="home"><a href="index.html">Home</a></h3>
-            </li>
-            <li>
-                <h3 id="gallery"><a href="gallery/gallery.html">Gallery</a></h3>
-            </li>
-            <li>
-                <h3 id="contact"><a href="contact/contact.html">Contact</a></h3>
-            </li>
-        </ul>
+        <img class="main_pic"
+            src="./assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg"></img>
+            <button class="order">Order Now</button>
+
     </div>
-    <h2 id="title">HOMEPAGE</h2>
 </body>
 
 </html>
