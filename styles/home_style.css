@@ -1,58 +1,90 @@
-.main_pic {
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg");
+}
+header {
+    display: flex;
+    background-color: rgb(54, 80, 80);
+    justify-content: space-between;
     width: 100%;
-    height: 90%;
-    object-fit: cover;
-    overflow: hidden;
-    opacity: 0.6;
-}
-.eye_catcher {
-    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
     align-items: center;
-}
-.logo_pic {
-    position: absolute;
-    top: 12%;
-    left: 46%;
-    opacity: 1;
-    z-index: 10;
-
+    font-size: 16px;
 }
 
-.title {
-    font-size: 2vw;
-    top: 30%;
-    left: 33%;
-    position: absolute;
-    color: black;
-    font-weight: bold;
-    z-index: 10;
-
-}
-.moto {
-    font-size: 2vw;
-    top: 53%;
-    right: 40%;
-    position: absolute;
-    text-align: center;
-    color: black;
-    font-weight: bold;
-    z-index: 10;
+.logo{
+    padding-top: 4vh;
+    height: 20vh;
+    
 }
 
+.text {
+    
+    color: white;
+    padding-bottom: 3vh;
+    padding-top: 10vh;
+}
+
+.text .title{
+    font-family: "paint";
+    padding-bottom: 2vh;
+    font-size: 65px;
+}
+.text .motto{
+    padding-bottom: 2vh;
+    font-size: 20px;
+    font-family: arial;
+}
 .order {
     border: none;
-    background-color: rgb(111, 187, 187);
+    background-color: rgb(61, 167, 167);
     cursor: pointer;
     padding: 10px 25px 10px;
     transition: 0.5s;
-    position: absolute;
-    border-radius: 15%;
-    border-color: black;
-    top: 65%;
-    left: 44.5%;
-    font-size: 2vw;
+    border-radius: 4px;
+    font-family: "arial";
+    font-size: 25px;
+    color:white;
 }
 
 .order:hover {
     background-color: rgb(129, 214, 214);
+}
+
+
+
+.logo_pic{
+    width:70px;
+    height:70px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    
+}
+
+
+@font-face{
+    font-family: "paint";
+    src:url("../assets/PAINP___.TTF") format('truetype')
+}
+
+@media(max-width: 800px){
+    .logo_pic{
+        padding-left: 0px;
+    }
+    header{
+        padding-left: 30px;
+    }
 }
