@@ -32,3 +32,5 @@ Option 2: If not, simply attach photos
 
 Arrives 27th of June PM (Delayed)
 
+## Site URL
+https://llh-kjr00.github.io/Moji-Sushi-Delivery-Static/
