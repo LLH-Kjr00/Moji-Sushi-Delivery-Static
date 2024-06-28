@@ -274,6 +274,10 @@ nav li button {
         height:30px;
         cursor: pointer;
     }
+    .order{
+        width: 60%;
+        border: 2px solid rgb(61, 167, 167);
+    }
 
 }
 
