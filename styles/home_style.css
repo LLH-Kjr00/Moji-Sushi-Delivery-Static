@@ -84,16 +84,17 @@ header {
     
 }
 .order {
-    border: 3px solid rgb(61, 167, 167);
-    /*background-color: rgb(61, 167, 167);*/
-    background-color: transparent;
+    border:3px solid rgb(54, 173, 173);
+    background-color: transparent;/*rgb(54, 173, 173);*/
+    /*background: linear-gradient(to bottom right, rgb(61, 167, 167), rgb(43, 210, 210));*/
     cursor: pointer;
     padding: 10px 25px 10px;
     transition: 0.5s;
-    border-radius: 2px;
+    border-radius: 3px;
     font-family: "calibri";
     font-size: 20px;
     color:white;
+    
 }
 
 .order:hover {
@@ -277,6 +278,7 @@ nav li button {
     .order{
         width: 60%;
         border: 2px solid rgb(61, 167, 167);
+        border-radius: 1000px;
     }
 
 }
