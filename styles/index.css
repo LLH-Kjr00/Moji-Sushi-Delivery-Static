@@ -1,0 +1,74 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body {
+  
+    background-image: 
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg")
+}
+
+.logo{
+    padding-top: 4vh;
+    height: 20vh;
+    
+}
+
+.text {
+    color: white;
+    padding-bottom: 3vh;
+    padding-top: 10vh;
+    align-items: center;
+    
+}
+
+.text .title{
+    font-family: "paint";
+    padding-bottom: 2vh;
+    font-size: 55px;
+    
+}
+.text .motto{
+    
+    padding-bottom: 2vh;
+    font-size: 25px;
+    font-family: "paint";
+    
+    
+}
+.order {
+    border: 3px solid rgb(61, 167, 167);
+    /*background-color: rgb(61, 167, 167);*/
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 25px 10px;
+    transition: 0.5s;
+    border-radius: 2px;
+    font-family: "calibri";
+    font-size: 20px;
+    color:white;
+}
+
+.order:hover {
+    background-color: rgb(61, 167, 167);
+}
+
+
+@font-face{
+    font-family: "paint";
+    src:url("../assets/special_font/PAINP___.TTF") format('truetype')
+}
+
+@media(max-width: 800px){
+   
+    .order{
+        width: 60%;
+        border: 2px solid rgb(61, 167, 167);
+    }
+
+}
