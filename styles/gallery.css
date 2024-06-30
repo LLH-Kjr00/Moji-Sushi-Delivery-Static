@@ -3,24 +3,60 @@ body {
     filter: blur(8px);
     -webkit-filter: blur(8px);
     */
-    background-image: 
-    linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("../assets/sushi-elegant-beautiful-fresh-japanese-culinary-art-free-photo.jpg")
-    
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("../assets/sushi-elegant-beautiful-fresh-japanese-culinary-art-free-photo.jpg");
+    overflow: hidden;
 }
+
+
 
 .title {
     font-family: "paint";
     font-size: 55px;
-    color:white;
-    
-
+    color: white;
+    padding: 5vh;
 }
 
-@font-face{
+.images {
+    overflow-y: auto;
+}
+.images img {
+    display:flexbox;
+    
+}
+.images .group {
+    height: 80vh;
+    width: 100vh
+}
+
+.images .small {
+    height:30%;
+    width: 30%;
+}
+
+.images .medium {
+    height:30%;
+    width: 50%;
+}
+
+.images .large {
+    height:50%;
+    width: 80%;
+}
+
+@font-face {
     font-family: "paint";
-    src:url("../assets/special_font/PAINP___.TTF") format('truetype')
+    src: url("../assets/special_font/PAINP___.TTF") format('truetype')
+}
+
+@keyframes transitionIn_Img {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
