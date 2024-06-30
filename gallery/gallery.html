@@ -1,16 +1,19 @@
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "../styles/globel.css">
-    <link rel="stylesheet" href = "../styles/gallery.css">
+    <link rel="stylesheet" href="../styles/globel.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="body">
     <header>
-        
+
         <img class="logo_pic" src="../assets/logo.png">
         <nav>
             <ul class="nav_links">
@@ -19,31 +22,67 @@
                 <li><button class="contact">Contact</button></li>
             </ul>
         </nav>
-        <img class = "side_icon" src = "../assets/sidebar.png" onclick = showSidebar()>
-        <ul class = "sidebar">
-            <img class = "cancel_icon" src = "../assets/cancel.png" onclick = hideSidebar()>
+        <img class="side_icon" src="../assets/sidebar.png" onclick=showSidebar()>
+        <ul class="sidebar">
+            <img class="cancel_icon" src="../assets/cancel.png" onclick=hideSidebar()>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../gallery/gallery.html">Gallery</a></li>
-            <li><button class = "contact">Contact</button></li>
+            <li><button class="contact">Contact</button></li>
         </ul>
     </header>
     <div class="container">
-        <h1 class ='title'>Gallery</h1>
+        <h1 class='title'>Gallery</h1>
+        <div class='images'>
+            <div class="group" id="gp1">
+                <div id="row1">
+                    <img class="small"
+                        src="../assets/dummy_pic/1_1.jpg">
+                    <img class="medium"
+                    src="../assets/dummy_pic/1_2.jpg">
+                </div>
+                <img class="large"
+                src="../assets/dummy_pic/1_3.jpg">
+            </div>
+
+
+        </div>
+
     </div>
 </body>
 
 </body>
+
 </html>
 
 <script>
-    function showSidebar(){
+    function showSidebar() {
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = "flex"
-        
+
     }
-    function hideSidebar(){
+    function hideSidebar() {
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = "none"
-        
+
     }
+    function change_imgSrc(num) {
+        let img_gp = document.querySelectorAll(`#gp${num} img`)
+        let images = [`${num}_1.jpg`, `${num}_2.jpg`, `${num}_3.jpg`]
+        const animation = [
+            { opacity: "0" },
+            { opacity: "1" },
+
+        ];
+        
+        for (let i = 0; i != img_gp.length; i++) {
+            let random = Math.floor(Math.random() * 3);
+            let animationTiming = {
+            duration: 500 + 500* Math.floor(Math.random() * 3),
+            iterations: 1,
+        };
+            img_gp[i].src = `../assets/dummy_pic/${images[random]}`;
+            img_gp[i].animate(animation, animationTiming)
+        }
+    }
+    setInterval(change_imgSrc, 30000, 1)
 </script>
