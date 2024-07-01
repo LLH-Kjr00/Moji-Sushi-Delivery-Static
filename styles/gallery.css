@@ -7,11 +7,14 @@ body {
         linear-gradient(rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)),
         url("../assets/sushi-elegant-beautiful-fresh-japanese-culinary-art-free-photo.jpg");
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 
-
+.images {
+    display:flex;
+    flex-direction: row;
+}
 .title {
     font-family: "paint";
     font-size: 55px;
@@ -19,44 +22,27 @@ body {
     padding: 5vh;
 }
 
-.images {
-    overflow-y: auto;
-}
-.images img {
-    display:flexbox;
-    
-}
+
 .images .group {
-    height: 100vh;
-    width: 100vh
+    height: 60vh;
+    width: 60vh;
+    display: flexbox;
+
 }
 
-.images .small {
-    height:50vh;
-    width: 30%;
-}
+
 
 .images .medium {
-    height:50vh;
-    width: 50%;
+    height: 100%;
+    width: 40%;
 }
 
 .images .large {
-    height:50vh;
+    height: 60%;
     width: 80%;
 }
 
 @font-face {
     font-family: "paint";
     src: url("../assets/special_font/PAINP___.TTF") format('truetype')
-}
-
-@keyframes transitionIn_Img {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
