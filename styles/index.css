@@ -77,7 +77,7 @@ body {
     .order{
         width: 70%;
         border: 2px solid rgb(61, 167, 167);
-        border-radius: 1000px;
+        border-radius: 3px;
         
     }
     .text .title{
