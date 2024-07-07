@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 body {
-  
+    background-size: 50%;
     background-image: 
     linear-gradient(
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("../assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg")
+    url("../assets/sushi-file.jpg")
 }
 
 .logo{
