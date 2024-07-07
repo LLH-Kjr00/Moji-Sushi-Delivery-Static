@@ -23,14 +23,14 @@ Option 2: If not, simply attach photos
 
 ## Deadline:
 
-30th of June
+Where are the goddamn photos 
 
 
 
 
 ## Promotional Photos
 
-Arrives 27th of June PM (Delayed)
+Where are the goddamn photos??????????
 
 ## Site URL
 https://llh-kjr00.github.io/Moji-Sushi-Delivery-Static/
