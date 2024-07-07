@@ -116,7 +116,7 @@ nav li a {
     cursor: pointer;
     transition: 0.2s;
     font-size: 20px;
-    font-family: "calibri";
+    font-family: "Calibri";
 }
 
 nav li button {
@@ -131,7 +131,7 @@ nav li button {
     cursor: pointer;
     transition: 0.5s;
     font-size: 20px;
-    font-family: "calibri";
+    font-family: "Calibri";
 }
 
 .side_icon{
@@ -170,7 +170,7 @@ nav li button {
     align-items: center;
     color:white;
     transition: 0.2s;
-    font-family: "calibri";
+    font-family: "Calibri";
     font-size: 20px;
     -webkit-tap-highlight-color: transparent;
 }
@@ -250,4 +250,9 @@ nav li button {
     to {
         opacity: 1;
     }
+}
+
+@font-face{
+    font-family: "Calibri";
+    src: url(../assets/calibri.ttf) format('truetype')
 }
