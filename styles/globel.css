@@ -97,7 +97,7 @@ nav li button:hover {
     background-color: rgb(83, 133, 133);
 }
 
-.nav_links li a::after {
+/*.nav_links li a::after {
     content: '';
     height: 2px;
     width: 100%;
@@ -105,7 +105,7 @@ nav li button:hover {
     display: block;
     position: absolute;
     bottom: -8px
-}
+}*/
 
 nav li a {
     height: 100%;
