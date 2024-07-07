@@ -170,6 +170,7 @@ nav li button {
     transition: 0.2s;
     font-family: "calibri";
     font-size: 20px;
+    -webkit-tap-highlight-color: transparent;
 }
 .sidebar li button{
     height:100%;
@@ -184,6 +185,7 @@ nav li button {
     transition: 0.5s;
     font-family: "calibri";
     font-size: 20px;
+    -webkit-tap-highlight-color: transparent;
 }
 .sidebar li{
     transition: 0.5s
