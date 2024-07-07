@@ -61,7 +61,7 @@ body {
 
     border-radius: 3px;
     border:none;
-    background-color: rgba(61, 167, 167,0.7);
+    background-color: rgba(61, 167, 167,1);
     
 }
 
@@ -84,7 +84,7 @@ body {
         /*border: 2px solid rgb(61, 167, 167);*/
         border-radius: 3px;
         border:none;
-        background-color: rgba(61, 167, 167,0.7);
+        background-color: rgba(61, 167, 167,1);
         
     }
     .text .title{
