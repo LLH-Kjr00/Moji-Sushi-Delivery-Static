@@ -47,9 +47,9 @@ body {
     
 }
 .order {
-    border: 3px solid rgb(61, 167, 167);
+    /*border: 3px solid rgb(61, 167, 167);*/
     /*background-color: rgb(61, 167, 167);*/
-    background-color: transparent;
+    /*background-color: transparent;*/
     cursor: pointer;
     padding: 10px 25px 10px;
     transition: 0.5s;
@@ -58,6 +58,11 @@ body {
     font-size: 20px;
     color:white;
     -webkit-tap-highlight-color: transparent;
+
+    border-radius: 3px;
+    border:none;
+    background-color: rgba(61, 167, 167,1);
+    
 }
 
 .order:hover {
@@ -75,9 +80,11 @@ body {
 @media(max-width: 800px){
    
     .order{
-        width: 70%;
-        border: 2px solid rgb(61, 167, 167);
+        width: 65%;
+        /*border: 2px solid rgb(61, 167, 167);*/
         border-radius: 3px;
+        border:none;
+        background-color: rgba(61, 167, 167,0.7);
         
     }
     .text .title{
