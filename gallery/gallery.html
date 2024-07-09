@@ -14,63 +14,46 @@
 </head>
 
 <body class="body">
-    <header>
+    <div class = first_page>
+        <header>
 
-        <img class="logo_pic" src="../assets/logo.png">
-        <nav>
-            <ul class="nav_links">
+            <img class="logo_pic" src="../assets/logo.png">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../gallery/gallery.html">Gallery</a></li>
+                    <li><button class="contact">Contact</button></li>
+                </ul>
+            </nav>
+            <img class="side_icon" src="../assets/sidebar.png" onclick=showSidebar()>
+            <ul class="sidebar">
+                <img class="cancel_icon" src="../assets/cancel.png" onclick=hideSidebar()>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../gallery/gallery.html">Gallery</a></li>
                 <li><button class="contact">Contact</button></li>
             </ul>
-        </nav>
-        <img class="side_icon" src="../assets/sidebar.png" onclick=showSidebar()>
-        <ul class="sidebar">
-            <img class="cancel_icon" src="../assets/cancel.png" onclick=hideSidebar()>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../gallery/gallery.html">Gallery</a></li>
-            <li><button class="contact">Contact</button></li>
-        </ul>
-    </header>
-    <div class="container">
-        <h1 class='title'>Gallery</h1>
-        <div class='images'>
-            <div class="group" id="gp1">
-                <div id="row1">
-                    <img class="medium" src="../assets/dummy_pic/1_1.jpg">
-                    <img class="medium" src="../assets/dummy_pic/1_2.jpg">
+        </header>
+        <div class="container">
+            <h1 class='title'>Gallery</h1>
+            <div class='images'>
+                <img class="arrows" id="backward" src="../assets//arrow.png" alt="">
+                <div>
+                    <img id="previous_pic" src="" alt="">
+                    <img id="current" src="" alt="">
+                    <img id="next_pic" src="" alt="">
+
                 </div>
-                <img class="large" src="../assets/dummy_pic/1_3.jpg">
+                <img class="arrows" id="forward" src="../assets//arrow.png" alt="">
+    
             </div>
-            <div class="group" id="gp2">
-
-                <img class="large" src="../assets/dummy_pic/2_3.jpg">
-                <div id="row2">
-                    <img class="medium" src="../assets/dummy_pic/2_1.jpg">
-                    <img class="medium" src="../assets/dummy_pic/2_2.jpg">
-                </div>
-            </div>
-            <div class="group" id="gp3">
-
-
-                <div id="row3">
-                    <img class="medium" src="../assets/dummy_pic/3_1.jpg">
-                    <img class="medium" src="../assets/dummy_pic/3_2.jpg">
-                </div>
-                <div id="row4">
-                    <img class="medium" src="../assets/dummy_pic/4_1.jpg">
-                    <img class="medium" src="../assets/dummy_pic/4_2.jpg">
-                </div>
-                <div id="row4">
-                    <img class="medium" src="../assets/dummy_pic/4_3.jpg">
-                    <img class="medium" src="../assets/dummy_pic/3_3.jpg">
-                </div>
-            </div>
-
+    
         </div>
+    </div>
+    <div class = second_page>
+        
 
     </div>
-</body>
+   
 
 </body>
 
