@@ -44,15 +44,15 @@ body {
 }
 
 .text .title{
-    font-family: "paint";
+    font-family: "brush";
     padding-bottom: 2vh;
-    font-size: 50px;
+    font-size: 60px;
 
 }
 .text .motto{
     
     padding-bottom: 2vh;
-    font-size: 17px;
+    font-size: 16px;
     /*font-family: "paint";*/
    
     
@@ -87,7 +87,10 @@ body {
     font-family: "paint";
     src:url("../assets/special_font/PAINP___.TTF") format('truetype')
 }
-
+@font-face{
+    font-family: "brush";
+    src:url("../assets/special_font/Brushstrike\ trial.ttf") format('truetype')
+}
 @media(max-width: 800px){
    
     .order{
@@ -99,7 +102,7 @@ body {
         
     }
     .text .title{
-        font-size: 40px;
+        font-size: 50px;
     }
     
 }
@@ -114,6 +117,8 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     z-index:10;
+
+    
 }
 
 
