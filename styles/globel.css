@@ -7,7 +7,7 @@
 
 
 body {
-    overflow: hidden;
+    overflow: scroll;
     animation: transitionIn_body 1s;
     z-index:10;
     background-size: cover;
@@ -24,7 +24,6 @@ header {
     /*background-color: rgb(40, 55, 71);*/
     justify-content: space-between;
     width: 100%;
-    
     padding-left: 10px;
     padding-right: 20px;
     align-items: center;

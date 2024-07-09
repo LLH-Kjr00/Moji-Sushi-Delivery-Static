@@ -20,7 +20,8 @@ body {
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("../assets/sushi-file.jpg")
+    url("../assets/sushi-file.jpg");
+    height:100vh;
 }
 
 .logo{
@@ -103,7 +104,7 @@ body {
     
 }
 
-.container-2{
+.second_page{
     text-align: center;
     align-items: center;
     overflow: hidden;
