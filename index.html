@@ -13,39 +13,42 @@
 </head>
 
 <body>
-    <header>
-        
-        <img class="logo_pic" src="./assets/logo.png">
-        <nav>
-            <ul class="nav_links">
+    <div class = first_page>
+        <header>
+            
+            <img class="logo_pic" src="./assets/logo.png">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./gallery/gallery.html">Gallery</a></li>
+                    <li><button class="contact">Contact</button></li>
+                </ul>
+            </nav>
+            <img class = "side_icon" src = "assets/sidebar.png" onclick = showSidebar()>
+            <ul class = "sidebar">
+                <img class = "cancel_icon" src = "assets/cancel.png" onclick = hideSidebar()>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./gallery/gallery.html">Gallery</a></li>
-                <li><button class="contact">Contact</button></li>
+                <li><button class = "contact">Contact</button></li>
             </ul>
-        </nav>
-        <img class = "side_icon" src = "assets/sidebar.png" onclick = showSidebar()>
-        <ul class = "sidebar">
-            <img class = "cancel_icon" src = "assets/cancel.png" onclick = hideSidebar()>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./gallery/gallery.html">Gallery</a></li>
-            <li><button class = "contact">Contact</button></li>
-        </ul>
-    </header>
-    <div class="container">
-       
-        <div class = "logo">
-            <img class = "logo_svg" src="./assets/logo.svg" viewbox = "20vh">
-        </div>
+        </header>
+        <div class="container">
+        
+            <div class = "logo">
+                <img class = "logo_svg" src="./assets/logo.svg" viewbox = "20vh">
+            </div>
+                
+            <div class="text">
+                <p class = "title">THIS IS HOW WE ROLL</p>
+                <p class = "motto">Enjoy our freshly hand-made sushi, delivered straight to your door.</p>
             
-        <div class="text">
-            <p class = "title">THIS IS HOW WE ROLL</p>
-            <p class = "motto">Enjoy our freshly hand-made sushi, delivered straight to your door.</p>
+            </div>
         
+            
+            <button class="order">Online Bestellen</button>
         </div>
-    
-        
-        <button class="order">Online Bestellen</button>
     </div>
+    
 </body>
 
 </html>
