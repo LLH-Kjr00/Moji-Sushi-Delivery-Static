@@ -75,7 +75,7 @@ body {
     border-radius: 3px;
     border:none;
     background-color: rgba(61, 167, 167,1);
-    
+    background: linear-gradient(to bottom right, rgba(61, 167, 167,1), rgb(40, 197, 197));
 }
 
 .order:hover {
