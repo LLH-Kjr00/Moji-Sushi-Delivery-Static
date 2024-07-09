@@ -172,7 +172,7 @@ nav li button {
     color:white;
     transition: 0.2s;
     font-family: "Calibri";
-    font-family: "brush";
+    /*font-family: "brush";*/
     font-size: 20px;
     -webkit-tap-highlight-color: transparent;
 }
@@ -188,7 +188,7 @@ nav li button {
     cursor:pointer;
     transition: 0.5s;
     font-family: "Calibri";
-    font-family: "brush";
+    /*font-family: "brush";*/
     font-size: 20px;
     -webkit-tap-highlight-color: transparent;
 }
