@@ -35,15 +35,15 @@ body {
 .text .title{
     font-family: "paint";
     padding-bottom: 2vh;
-    font-size: 55px;
-    
+    font-size: 50px;
+
 }
 .text .motto{
     
     padding-bottom: 2vh;
-    font-size: 25px;
-    font-family: "paint";
-    
+    font-size: 17px;
+    /*font-family: "paint";*/
+   
     
 }
 .order {
@@ -88,7 +88,7 @@ body {
         
     }
     .text .title{
-        font-size: 45px;
+        font-size: 40px;
     }
     
 }
