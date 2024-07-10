@@ -137,6 +137,7 @@ body {
 .section_header{
     font-family: "brush";
     font-size: 35px;
+    padding-bottom: 1vh;
 }
 .section_value{
     font-size: 20px;
@@ -164,7 +165,7 @@ body {
 }
 .credentials{
     left:0;
-    bottom:-100%;
+    bottom:-100vh;
     color:aliceblue;
     position: absolute;
     font-size: 14px;
@@ -178,8 +179,8 @@ body {
     width:100%;
 }
 .social img{
-    width: 20px;
-    height:20px;
+    width: 25px;
+    height:25px;
     margin-left: 10px;
     margin-right:10px;
     
