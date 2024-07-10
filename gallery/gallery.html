@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+
+
+
 </head>
 
 <body class="body">
@@ -39,9 +42,9 @@
                 <img class="arrows" id="backward" src="../assets/arrow.png" alt="" onclick=change_pic_prev()>
 
                 <div class='images'>
-                    <img id="previous_pic" src="../assets/dummy_pic/35.jpg" alt="">
-                    <img id="current_pic" src="../assets/dummy_pic/36.jpg" alt="">
-                    <img id="next_pic" src="../assets/dummy_pic/37.jpg" alt="">
+                    <img id="previous_pic" src="../assets/dummy_pic/0.jpg" alt="">
+                    <img id="current_pic" src="../assets/dummy_pic/1.jpg" alt="">
+                    <img id="next_pic" src="../assets/dummy_pic/2.jpg" alt="">
                 </div>
                 <img class="arrows" id="forward" src="../assets/arrow.png" alt="" onclick=change_pic_next()>
             </div>
@@ -49,9 +52,39 @@
 
         </div>
     </div>
-    <div class=second_page>
-
-
+    <div class = "second_page">
+        <div class="contact_header">
+            Contact Us
+        </div>
+        <div class = "contact_details">
+            <div class="left">
+                <div class="contact_section">
+                    <p class="section_header">Telephone:</p>
+                    <p class="section_value">040 521 629 69</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Email</p>
+                    <p class="section_value">???@gmail.com</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Adresse</p>
+                    <p class="section_value">Alsterdorfer Straße 263, Hamburg, Germany 22297</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Öffnungszeiten</p>
+                    <p class="section_value">Di-Do: 16:00-21:30 und Fr-So: 16:00-22:00</p>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/moji_sushi/"><img class="logo_pic" src="../assets/ig.png"></a>
+                </div>
+            </div>
+            <div class = "right">
+                123
+            </div>
+        </div>
+        <div class="credentials">
+            2024 Powered By M&P Services
+        </div>
     </div>
 
 
@@ -72,62 +105,162 @@
         sidebar.style.right = "-100vw"
 
     }
+
+    let prevPicRef, currPicRef, nextPicRef;
+
     function change_pic_next() {
 
 
+        if (!prevPicRef || !currPicRef || !nextPicRef) {
+            prevPicRef = document.querySelector('#previous_pic');
+            currPicRef = document.querySelector('#current_pic');
+            nextPicRef = document.querySelector('#next_pic');
+            prevPicRef.style.opacity = '0';
+            currPicRef.style.opacity = '0';
+            nextPicRef.style.opacity = '0';
 
-        let prev_pic = document.querySelector('#previous_pic')
-        let curr_pic = document.querySelector('#current_pic')
-        let next_pic = document.querySelector('#next_pic')
-        let curr_filename = curr_pic.src
-        let curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
+        }
 
-        prev_pic.src = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
-        curr_pic.src = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
-        next_pic.src = `../assets/dummy_pic/${(curr_idx + 2) % 38}.jpg`;
 
-   
-        /**
-          * prev_pic.style.animation = 'transitionIn_body 1s'
-         curr_pic.style.animation = 'transitionIn_body 1s'
-         next_pic.style.animation = 'transitionIn_body 1s'
-         */
+
+        const curr_filename = currPicRef.src
+        const curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
+
+        let prevPicSrc, currPicSrc, nextPicSrc;
+
+        prevPicSrc = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
+        currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
+        nextPicSrc = `../assets/dummy_pic/${(curr_idx + 2) % 38}.jpg`;
+
+        prevPicRef.src = prevPicSrc;
+        currPicRef.src = currPicSrc;
+        nextPicRef.src = nextPicSrc;
+
+
+        prevPicRef.addEventListener('load', () => {
+            const prev_pic_ani_exit = prevPicRef.animate(
+                [
+                    { transform: 'translateX(-100%)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 },
+                ],
+                {
+                    duration: 1000,
+                    easing: 'ease-in-out',
+                }
+            );
+        });
+
+        currPicRef.addEventListener('load', () => {
+            const curr_pic_ani_exit = currPicRef.animate(
+                [
+                    { transform: 'translateX(-100%)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 },
+                ],
+                {
+                    duration: 1500,
+                    easing: 'ease-in-out',
+                }
+            );
+        });
+
+        nextPicRef.addEventListener('load', () => {
+            const next_pic_ani_exit = nextPicRef.animate(
+                [
+                    { transform: 'translateX(-100%)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 },
+                ],
+                {
+                    duration: 2000,
+                    easing: 'ease-in-out',
+                }
+            );
+        });
+
+        prevPicRef.style.opacity = '1';
+        currPicRef.style.opacity = '1';
+        nextPicRef.style.opacity = '1';
 
     }
 
     function change_pic_prev() {
-        let prev_pic = document.querySelector('#previous_pic')
-        let curr_pic = document.querySelector('#current_pic')
-        let next_pic = document.querySelector('#next_pic')
+        if (!prevPicRef || !currPicRef || !nextPicRef) {
+            prevPicRef = document.querySelector('#previous_pic');
+            currPicRef = document.querySelector('#current_pic');
+            nextPicRef = document.querySelector('#next_pic');
+            prevPicRef.style.opacity = '0';
+            currPicRef.style.opacity = '0';
+            nextPicRef.style.opacity = '0';
 
-        let curr_filename = curr_pic.src
-        let curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
+        }
+
+
+
+        const curr_filename = currPicRef.src
+        const curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
+
+        let prevPicSrc, currPicSrc, nextPicSrc;
 
 
         if (curr_idx <= 1) {
-            prev_pic.src = `../assets/dummy_pic/${(curr_idx - 2 + 38) % 38}.jpg`;
-            curr_pic.src = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
-            next_pic.src = `../assets/dummy_pic/${(curr_idx + 38) % 38}.jpg`;
+            prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2 + 38) % 38}.jpg`;
+            currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
+            nextPicSrc = `../assets/dummy_pic/${(curr_idx + 38) % 38}.jpg`;
         }
         else {
-            prev_pic.src = `../assets/dummy_pic/${(curr_idx - 2) % 38}.jpg`;
-            curr_pic.src = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
-            next_pic.src = `../assets/dummy_pic/${(curr_idx) % 38}.jpg`;
+            prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2) % 38}.jpg`;
+            currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
+            nextPicSrc = `../assets/dummy_pic/${(curr_idx) % 38}.jpg`;
         }
 
-      
+        prevPicRef.src = prevPicSrc;
+        currPicRef.src = currPicSrc;
+        nextPicRef.src = nextPicSrc;
 
-        /**
-         * prev_pic.style.animation = 'transitionIn_body 1s'
-        curr_pic.style.animation = 'transitionIn_body 1s'
-        next_pic.style.animation = 'transitionIn_body 1s'
-        */
+
+        prevPicRef.addEventListener('load', () => {
+            const prev_pic_ani_exit = prevPicRef.animate(
+                [
+                    { transform: 'translateX(100%)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 },
+                ],
+                {
+                    duration: 1000,
+                    easing: 'ease-in-out',
+                }
+            );
+        });
+
+        currPicRef.addEventListener('load', () => {
+            const curr_pic_ani_exit = currPicRef.animate(
+                [
+                    { transform: 'translateX(100%)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 },
+                ],
+                {
+                    duration: 1500,
+                    easing: 'ease-in-out',
+                }
+            );
+        });
+
+        nextPicRef.addEventListener('load', () => {
+            const next_pic_ani_exit = nextPicRef.animate(
+                [
+                    { transform: 'translateX(100%)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 },
+                ],
+                {
+                    duration: 2000,
+                    easing: 'ease-in-out',
+                }
+            );
+        });
+        prevPicRef.style.opacity = '1';
+        currPicRef.style.opacity = '1';
+        nextPicRef.style.opacity = '1';
+
     }
 
-    function readDirectoryFiles() {
-        const directoryPath = '../assets/dummy_pic/';
-
-    }
 
 
 
