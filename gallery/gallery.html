@@ -14,7 +14,7 @@
 </head>
 
 <body class="body">
-    <div class = first_page>
+    <div class=first_page>
         <header>
 
             <img class="logo_pic" src="../assets/logo.png">
@@ -35,25 +35,25 @@
         </header>
         <div class="container">
             <h1 class='title'>Gallery</h1>
-            <div class='images'>
-                <img class="arrows" id="backward" src="../assets//arrow.png" alt="">
-                <div>
-                    <img id="previous_pic" src="" alt="">
-                    <img id="current" src="" alt="">
-                    <img id="next_pic" src="" alt="">
+            <div class="display">
+                <img class="arrows" id="backward" src="../assets/arrow.png" alt="" onclick=change_pic_prev()>
 
+                <div class='images'>
+                    <img id="previous_pic" src="../assets/dummy_pic/35.jpg" alt="">
+                    <img id="current_pic" src="../assets/dummy_pic/36.jpg" alt="">
+                    <img id="next_pic" src="../assets/dummy_pic/37.jpg" alt="">
                 </div>
-                <img class="arrows" id="forward" src="../assets//arrow.png" alt="">
-    
+                <img class="arrows" id="forward" src="../assets/arrow.png" alt="" onclick=change_pic_next()>
             </div>
-    
+
+
         </div>
     </div>
-    <div class = second_page>
-        
+    <div class=second_page>
+
 
     </div>
-   
+
 
 </body>
 
@@ -64,7 +64,7 @@
         const sidebar = document.querySelector('.sidebar')
         /*sidebar.style.display = "flex"*/
         sidebar.style.height = "100vh"
-        sidebar.style.right="0"
+        sidebar.style.right = "0"
 
     }
     function hideSidebar() {
@@ -72,29 +72,68 @@
         sidebar.style.right = "-100vw"
 
     }
-    function change_imgSrc(num) {
-        let img_gp = document.querySelectorAll(`#gp${num} img`)
-        let images = [`${num}_1.jpg`, `${num}_2.jpg`, `${num}_3.jpg`
-            , `${num + 1}_3.jpg`, `${num + 1}_3.jpg`, `${num + 1}_3.jpg`
-        ]
-        const animation = [
-            { opacity: "0" },
-            { opacity: "1" },
+    function change_pic_next() {
 
-        ];
 
-        for (let i = 0; i != img_gp.length; i++) {
-            let random = Math.floor(Math.random() * 3);
-            let animationTiming = {
-                duration: 500 + 500 * Math.floor(Math.random() * 3),
-                iterations: 1,
-            };
-            img_gp[i].src = `../assets/dummy_pic/${images[random]}`;
-            img_gp[i].animate(animation, animationTiming)
-        }
+
+        let prev_pic = document.querySelector('#previous_pic')
+        let curr_pic = document.querySelector('#current_pic')
+        let next_pic = document.querySelector('#next_pic')
+        let curr_filename = curr_pic.src
+        let curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
+
+        prev_pic.src = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
+        curr_pic.src = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
+        next_pic.src = `../assets/dummy_pic/${(curr_idx + 2) % 38}.jpg`;
+
+        console.log("prev : " +  prev_pic.src)
+        console.log("curr : " +  curr_pic.src)
+        console.log("next : " +   next_pic.src)
+        /**
+          * prev_pic.style.animation = 'transitionIn_body 1s'
+         curr_pic.style.animation = 'transitionIn_body 1s'
+         next_pic.style.animation = 'transitionIn_body 1s'
+         */
+
     }
-    setInterval(change_imgSrc, 10000, 1)
-    setInterval(change_imgSrc, 10000 + 5000, 2)
-    setInterval(change_imgSrc, 10000 + 5000 * 2, 3)
+
+    function change_pic_prev() {
+        let prev_pic = document.querySelector('#previous_pic')
+        let curr_pic = document.querySelector('#current_pic')
+        let next_pic = document.querySelector('#next_pic')
+
+        let curr_filename = curr_pic.src
+        let curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
+
+
+        if (curr_idx <= 1) {
+            prev_pic.src = `../assets/dummy_pic/${(curr_idx - 2 + 38) % 38}.jpg`;
+            curr_pic.src = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
+            next_pic.src = `../assets/dummy_pic/${(curr_idx + 38) % 38}.jpg`;
+        }
+        else {
+            prev_pic.src = `../assets/dummy_pic/${(curr_idx - 2) % 38}.jpg`;
+            curr_pic.src = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
+            next_pic.src = `../assets/dummy_pic/${(curr_idx) % 38}.jpg`;
+        }
+
+        console.log("prev : " +  prev_pic.src)
+        console.log("curr : " +  curr_pic.src)
+        console.log("next : " +   next_pic.src)
+
+        /**
+         * prev_pic.style.animation = 'transitionIn_body 1s'
+        curr_pic.style.animation = 'transitionIn_body 1s'
+        next_pic.style.animation = 'transitionIn_body 1s'
+        */
+    }
+
+    function readDirectoryFiles() {
+        const directoryPath = '../assets/dummy_pic/';
+
+    }
+
+
+
 
 </script>

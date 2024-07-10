@@ -257,7 +257,7 @@ nav li button {
 
 @font-face{
     font-family: "Calibri";
-    src: url(../assets/calibri.ttf) format('truetype')
+    src: url(../assets/special_font/calibri.ttf) format('truetype')
 }
 
 @font-face{
