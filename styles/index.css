@@ -178,8 +178,8 @@ body {
     width:100%;
 }
 .social img{
-    width: 30px;
-    height:30px;
+    width: 20px;
+    height:20px;
     margin-left: 10px;
     margin-right:10px;
     
@@ -187,7 +187,7 @@ body {
 .social a{
     -webkit-tap-highlight-color: transparent;
 }
-.
+
 @media(max-width: 800px){
    
     .order{
@@ -206,7 +206,7 @@ body {
         display:block;
     }
     .contact_header{
-        padding-top: 3vh;
+        padding-top: 8vh;
         padding-bottom:5vh;
     }
     .second_page{
