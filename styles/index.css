@@ -22,6 +22,7 @@ body {
     ),
     url("../assets/sushi-file.jpg");
     height:100vh;
+    
 }
 
 .logo{
@@ -59,6 +60,11 @@ body {
 .title br{
  display:none;
 }
+.link{
+    -webkit-tap-highlight-color: transparent;
+    width:100%;
+    
+}
 .order {
     /*border: 3px solid rgb(61, 167, 167);*/
     /*background-color: rgb(61, 167, 167);*/
@@ -79,8 +85,7 @@ body {
 }
 
 .order:hover {
-    /*background-color: rgba(61, 167, 167, 0.9);*/
-    background-color: rgb(61, 167, 167);
+    /*background-color: rgba(48, 236, 236, 0.9);*/
     
 }
 
@@ -92,6 +97,77 @@ body {
 @font-face{
     font-family: "brush";
     src:url("../assets/special_font/Brushstrike\ trial.ttf") format('truetype')
+}
+.contact_header{
+    padding-top: 8vh;
+    color:white;
+    font-family: "brush";
+    font-size: 55px;
+    padding-bottom:10vh;
+}
+
+.contact_details{
+    
+    color:white;
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:100vw;
+}
+
+.left{
+    width:100%;
+    height:100%;
+    align-items: center;
+}
+.right{
+    width:100%;
+    height:100%;
+    align-items:center;
+    display:none
+}
+
+.contact_section{
+    padding-bottom: 3vh;
+    
+}
+.section_header{
+    font-family: "brush";
+    font-size: 35px;
+}
+.section_value{
+    font-size: 20px;
+    font-family:"Calibri";
+}
+.second_page{
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index:10;
+    background-size: cover;
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../assets/sushi-contact.png");
+    background-position: center;
+    width:100vw;
+}
+.credentials{
+    left:0;
+    bottom:-100%;
+    color:aliceblue;
+    position: absolute;
+    font-size: 14px;
+    padding-left: 1vw;
+    font-family: "Calibri";
 }
 @media(max-width: 800px){
    
@@ -109,21 +185,21 @@ body {
     }
     .title br{
         display:block;
-       }
+    }
+    .contact_header{
+        padding-top: 3vh;
+        padding-bottom:5vh;
+    }
+    .second_page{
+        background-position: center;
+    }
+    .credentials{
+        padding-bottom: 2vh;
+        padding-left:2vh;
+    }
 }
 
-.second_page{
-    text-align: center;
-    align-items: center;
-    overflow: hidden;
-    display:flex;
-    flex-direction: column;
-    height:100vh;
-    padding-left: 10px;
-    padding-right: 10px;
-    z-index:10;
 
-    
-}
+
 
 

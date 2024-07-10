@@ -19,7 +19,7 @@
                 <ul class="nav_links">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./gallery/gallery.html">Gallery</a></li>
-                    <li><button class="contact">Contact</button></li>
+                    <li><button class="contact" onclick=scrollToElement()>Contact</button></li>
                 </ul>
             </nav>
             <img class = "side_icon" src = "assets/sidebar.png" onclick = showSidebar()>
@@ -27,7 +27,7 @@
                 <img class = "cancel_icon" src = "assets/cancel.png" onclick = hideSidebar()>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./gallery/gallery.html">Gallery</a></li>
-                <li><button class = "contact">Contact</button></li>
+                <li onclick=scrollToElement()><button class = "contact" >Contact</button></li>
             </ul>
         </header>
         <div class="container">
@@ -44,11 +44,39 @@
             
             </div>
         
-          <button class="order">Online Bestellen</button>
+          <a class = "link" href="https://shop.moji-sushi.de/storedata/listStore"><button class="order">Online Bestellen</button></a>
         </div>
     </div>
     <div class = "second_page">
-        
+        <div class="contact_header">
+            Contact Us
+        </div>
+        <div class = "contact_details">
+            <div class="left">
+                <div class="contact_section">
+                    <p class="section_header">Telephone:</p>
+                    <p class="section_value">+49 12332423</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Email</p>
+                    <p class="section_value">???@gmail.com</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Adresse</p>
+                    <p class="section_value">Alsterdorfer Str. 263, 22297 Hamburg, Germany</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Öffnungszeiten</p>
+                    <p class="section_value">12:00 - 21:30 Uhr</p>
+                </div>
+            </div>
+            <div class = "right">
+                123
+            </div>
+        </div>
+        <div class="credentials">
+            2024 Powered By M&P Services
+        </div>
     </div>
 </body>
 
@@ -62,6 +90,12 @@
         sidebar.style.right="0"
     }
     function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.right = "-100vw"
+    }
+    function scrollToElement(){
+        var elmnt = document.getElementsByClassName("second_page")[0];
+        elmnt.scrollIntoView({behavior:'smooth', block:"center"});//, block:'center', inline:'center'});
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.right = "-100vw"
     }
