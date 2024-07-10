@@ -104,6 +104,7 @@ body {
     font-family: "brush";
     font-size: 55px;
     padding-bottom:10vh;
+    /*border-bottom: 1px solid white;*/
 }
 
 .contact_details{
@@ -114,6 +115,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     width:100vw;
+    justify-content: center;
 }
 
 .left{
@@ -169,6 +171,23 @@ body {
     padding-left: 1vw;
     font-family: "Calibri";
 }
+.social{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+}
+.social img{
+    width: 30px;
+    height:30px;
+    margin-left: 10px;
+    margin-right:10px;
+    
+}
+.social a{
+    -webkit-tap-highlight-color: transparent;
+}
+.
 @media(max-width: 800px){
    
     .order{

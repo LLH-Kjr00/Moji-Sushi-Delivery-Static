@@ -55,7 +55,7 @@
             <div class="left">
                 <div class="contact_section">
                     <p class="section_header">Telephone:</p>
-                    <p class="section_value">+49 12332423</p>
+                    <p class="section_value">040 521 629 69</p>
                 </div>
                 <div class="contact_section">
                     <p class="section_header">Email</p>
@@ -63,11 +63,14 @@
                 </div>
                 <div class="contact_section">
                     <p class="section_header">Adresse</p>
-                    <p class="section_value">Alsterdorfer Str. 263, 22297 Hamburg, Germany</p>
+                    <p class="section_value">Alsterdorfer Straße 263, Hamburg, Germany 22297</p>
                 </div>
                 <div class="contact_section">
                     <p class="section_header">Öffnungszeiten</p>
                     <p class="section_value">12:00 - 21:30 Uhr</p>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/moji_sushi/"><img class="logo_pic" src="./assets/ig.png"></a>
                 </div>
             </div>
             <div class = "right">
@@ -95,7 +98,7 @@
     }
     function scrollToElement(){
         var elmnt = document.getElementsByClassName("second_page")[0];
-        elmnt.scrollIntoView({behavior:'smooth', block:"center"});//, block:'center', inline:'center'});
+        elmnt.scrollIntoView({behavior:'smooth', block:"start"});//, block:'center', inline:'center'});
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.right = "-100vw"
     }
