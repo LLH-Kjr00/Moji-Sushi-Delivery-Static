@@ -310,10 +310,11 @@ nav li button {
 .credentials{
     
     color:aliceblue;
-    margin-top: auto;
     margin-bottom: 1vh;
     font-size: 14px;
     font-family: "Calibri";
+    margin-top: auto;
+    
 }
 .social{
     display:flex;
