@@ -58,21 +58,19 @@
 .slide-button {
   height: 8vh;
   width: 8vh;
-  color: black;
-  background-color: white;
   cursor: pointer;
-  border-radius: 50%;
-  font-size: large;
-  font-weight: bolder;
   align-items: center;
   margin: 3vh;
   user-select: none;
+}
 
+#prev-slide {
+  transform: rotateY(180deg);
 }
 
 .slider-wrapper .image-list .image-item {
-  width: 325px;
-  height: 400px;
+  width: 30vh;
+  height: 30vh;
   object-fit: cover;
   margin: 2vh;
 }
