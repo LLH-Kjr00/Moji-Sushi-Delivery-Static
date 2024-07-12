@@ -38,25 +38,61 @@
         </header>
         <div class="container">
             <h1 class='title'>Gallery</h1>
-            <div class="display">
-                <img class="arrows" id="backward" src="../assets/arrow.png" alt="" onclick=change_pic_prev()>
+            <div class="slide-container">
 
-                <div class='images'>
-                    <img id="previous_pic" src="../assets/dummy_pic/0.jpg" alt="">
-                    <img id="current_pic" src="../assets/dummy_pic/1.jpg" alt="">
-                    <img id="next_pic" src="../assets/dummy_pic/2.jpg" alt="">
+                <div class="slider-wrapper">
+
+                    <div class="image-list">
+                        <img class="image-item" src="../assets/dummy_pic/0.jpg"
+                            alt="This is the description for sushi No.0" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" src="../assets/dummy_pic/1.jpg"
+                            alt="This is the description for sushi No.1" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" src="../assets/dummy_pic/2.jpg"
+                            alt="This is the description for sushi No.2" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" src="../assets/dummy_pic/3.jpg"
+                            alt="This is the description for sushi No.3" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" src="../assets/dummy_pic/4.jpg"
+                            alt="This is the description for sushi No.4" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" src="../assets/dummy_pic/5.jpg"
+                            alt="This is the description for sushi No.5" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" src="../assets/dummy_pic/6.jpg"
+                            alt="This is the description for sushi No.6" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" src="../assets/dummy_pic/7.jpg"
+                            alt="This is the description for sushi No.7" onclick=handleClickPhoto(this.alt) />
+
+                    </div>
+
                 </div>
-                <img class="arrows" id="forward" src="../assets/arrow.png" alt="" onclick=change_pic_next()>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                </div>
+                <div class="contain_wrapper">
+                    <button id="prev-slide" class="slide-button">
+                        Last
+                    </button>
+                    <div class="description">
+                        Check detailed product description by clicking on the photos!
+                    </div>
+                    <button id="next-slide" class="slide-button">
+                        Next
+                    </button>
+                </div>
             </div>
+
+
 
 
         </div>
     </div>
-    <div class = "second_page">
+    <div class="separation_line"></div>
+
+    <div class="second_page">
         <div class="contact_header">
             Contact Us
         </div>
-        <div class = "contact_details">
+        <div class="contact_details">
             <div class="left">
                 <div class="contact_section">
                     <p class="section_header">Telephone:</p>
@@ -78,7 +114,7 @@
                     <a href="https://www.instagram.com/moji_sushi/"><img class="logo_pic" src="../assets/ig.png"></a>
                 </div>
             </div>
-            <div class = "right">
+            <div class="right">
                 123
             </div>
         </div>
@@ -86,7 +122,6 @@
             2024 Powered By M&P Services
         </div>
     </div>
-
 
 </body>
 
@@ -106,163 +141,115 @@
 
     }
 
-    let prevPicRef, currPicRef, nextPicRef;
+    function initSlider() {
+        const imageList = document.querySelector(".slider-wrapper .image-list");
+        const slideButtons = document.querySelectorAll(".slide-button");
+        const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
 
-    function change_pic_next() {
+        // Handle scrollbar thumb drag
+        scrollbarThumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = scrollbarThumb.offsetLeft;
+            const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
 
+            // Update thumb position on mouse move
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+                // Ensure the scrollbar thumb stays within bounds
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
 
-        if (!prevPicRef || !currPicRef || !nextPicRef) {
-            prevPicRef = document.querySelector('#previous_pic');
-            currPicRef = document.querySelector('#current_pic');
-            nextPicRef = document.querySelector('#next_pic');
-            prevPicRef.style.opacity = '0';
-            currPicRef.style.opacity = '0';
-            nextPicRef.style.opacity = '0';
+                scrollbarThumb.style.left = `${boundedPosition}px`;
+                imageList.scrollLeft = scrollPosition;
+            }
+            // Remove event listeners on mouse up
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+            }
+            // Add event listeners for drag interaction
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+        // Slide images according to the slide button clicks
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
 
+        // Update scrollbar thumb position based on image scroll
+        function updateScrollThumbPosition() {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
         }
-
-
-
-        const curr_filename = currPicRef.src
-        const curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
-
-        let prevPicSrc, currPicSrc, nextPicSrc;
-
-        prevPicSrc = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
-        currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
-        nextPicSrc = `../assets/dummy_pic/${(curr_idx + 2) % 38}.jpg`;
-
-        prevPicRef.src = prevPicSrc;
-        currPicRef.src = currPicSrc;
-        nextPicRef.src = nextPicSrc;
-
-
-        prevPicRef.addEventListener('load', () => {
-            const prev_pic_ani_exit = prevPicRef.animate(
-                [
-                    { transform: 'translateX(-100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 1000,
-                    easing: 'ease-in-out',
-                }
-            );
+        // Call these two functions when image list scrolls
+        imageList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
         });
-
-        currPicRef.addEventListener('load', () => {
-            const curr_pic_ani_exit = currPicRef.animate(
-                [
-                    { transform: 'translateX(-100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 1500,
-                    easing: 'ease-in-out',
-                }
-            );
-        });
-
-        nextPicRef.addEventListener('load', () => {
-            const next_pic_ani_exit = nextPicRef.animate(
-                [
-                    { transform: 'translateX(-100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 2000,
-                    easing: 'ease-in-out',
-                }
-            );
-        });
-
-        prevPicRef.style.opacity = '1';
-        currPicRef.style.opacity = '1';
-        nextPicRef.style.opacity = '1';
-
     }
 
-    function change_pic_prev() {
-        if (!prevPicRef || !currPicRef || !nextPicRef) {
-            prevPicRef = document.querySelector('#previous_pic');
-            currPicRef = document.querySelector('#current_pic');
-            nextPicRef = document.querySelector('#next_pic');
-            prevPicRef.style.opacity = '0';
-            currPicRef.style.opacity = '0';
-            nextPicRef.style.opacity = '0';
-
-        }
+    async function handleClickPhoto(pic_alt) {
 
 
+        const contentDiv = document.querySelector('.description');
 
-        const curr_filename = currPicRef.src
-        const curr_idx = parseInt(curr_filename.split('\\').pop().split('/').pop().split('.')[0]);
+        contentDiv.textContent = pic_alt;
 
-        let prevPicSrc, currPicSrc, nextPicSrc;
-
-
-        if (curr_idx <= 1) {
-            prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2 + 38) % 38}.jpg`;
-            currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
-            nextPicSrc = `../assets/dummy_pic/${(curr_idx + 38) % 38}.jpg`;
-        }
-        else {
-            prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2) % 38}.jpg`;
-            currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
-            nextPicSrc = `../assets/dummy_pic/${(curr_idx) % 38}.jpg`;
-        }
-
-        prevPicRef.src = prevPicSrc;
-        currPicRef.src = currPicSrc;
-        nextPicRef.src = nextPicSrc;
-
-
-        prevPicRef.addEventListener('load', () => {
-            const prev_pic_ani_exit = prevPicRef.animate(
-                [
-                    { transform: 'translateX(100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 1000,
-                    easing: 'ease-in-out',
-                }
-            );
-        });
-
-        currPicRef.addEventListener('load', () => {
-            const curr_pic_ani_exit = currPicRef.animate(
-                [
-                    { transform: 'translateX(100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 1500,
-                    easing: 'ease-in-out',
-                }
-            );
-        });
-
-        nextPicRef.addEventListener('load', () => {
-            const next_pic_ani_exit = nextPicRef.animate(
-                [
-                    { transform: 'translateX(100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 2000,
-                    easing: 'ease-in-out',
-                }
-            );
-        });
-        prevPicRef.style.opacity = '1';
-        currPicRef.style.opacity = '1';
-        nextPicRef.style.opacity = '1';
+        const contentDivAni = contentDiv.animate(
+            [
+                { opacity: 0 },
+                { opacity: 1 }
+            ],
+            {
+                duration: 750,
+                easing: 'ease-in-out'
+            }
+        );
 
     }
-
-
-
-
-
+    window.addEventListener("resize", initSlider);
+    window.addEventListener("load", initSlider);
 </script>
+
+<!-- 
+                    <img class="image-item" src="../assets//dummy_pic/5.jpg" alt="img-5" />
+                    <img class="image-item" src="../assets//dummy_pic/6.jpg" alt="img-6" />
+                    <img class="image-item" src="../assets//dummy_pic/7.jpg" alt="img-7" />
+                    <img class="image-item" src="../assets//dummy_pic/8.jpg" alt="img-8" />
+                    <img class="image-item" src="../assets//dummy_pic/9.jpg" alt="img-9" />
+
+                    <img class="image-item" src="../assets//dummy_pic/10.jpg" alt="img-10" />
+                    <img class="image-item" src="../assets//dummy_pic/11.jpg" alt="img-11" />
+                    <img class="image-item" src="../assets//dummy_pic/12.jpg" alt="img-12" />                        <img class="image-item" src="../assets//dummy_pic/13.jpg" alt="img-13" />
+                    <img class="image-item" src="../assets//dummy_pic/14.jpg" alt="img-14" />
+                    <img class="image-item" src="../assets//dummy_pic/15.jpg" alt="img-15" />
+                    <img class="image-item" src="../assets//dummy_pic/16.jpg" alt="img-16" />
+                    <img class="image-item" src="../assets//dummy_pic/17.jpg" alt="img-17" />
+                    <img class="image-item" src="../assets//dummy_pic/18.jpg" alt="img-18" />
+                    <img class="image-item" src="../assets//dummy_pic/19.jpg" alt="img-19" />
+                    <img class="image-item" src="../assets//dummy_pic/20.jpg" alt="img-20" />
+                    <img class="image-item" src="../assets//dummy_pic/21.jpg" alt="img-21" />
+                    <img class="image-item" src="../assets//dummy_pic/22.jpg" alt="img-22" />
+                    <img class="image-item" src="../assets//dummy_pic/23.jpg" alt="img-23" />
+                    <img class="image-item" src="../assets//dummy_pic/24.jpg" alt="img-24" />
+                    <img class="image-item" src="../assets//dummy_pic/25.jpg" alt="img-25" />
+                    <img class="image-item" src="../assets//dummy_pic/26.jpg" alt="img-26" />
+                    <img class="image-item" src="../assets//dummy_pic/27.jpg" alt="img-27" />
+                    <img class="image-item" src="../assets//dummy_pic/28.jpg" alt="img-28" />
+                    <img class="image-item" src="../assets//dummy_pic/29.jpg" alt="img-29" />
+                    <img class="image-item" src="../assets//dummy_pic/30.jpg" alt="img-30" />
+                    <img class="image-item" src="../assets//dummy_pic/31.jpg" alt="img-31" />
+                    <img class="image-item" src="../assets//dummy_pic/32.jpg" alt="img-32" />
+                    <img class="image-item" src="../assets//dummy_pic/33.jpg" alt="img-33" />
+                    <img class="image-item" src="../assets//dummy_pic/34.jpg" alt="img-34" />
+                    <img class="image-item" src="../assets//dummy_pic/35.jpg" alt="img-35" />
+                    <img class="image-item" src="../assets//dummy_pic/36.jpg" alt="img-36" />
+                    <img class="image-item" src="../assets//dummy_pic/37.jpg" alt="img-37" />
+                    -->

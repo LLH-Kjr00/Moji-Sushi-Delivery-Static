@@ -7,14 +7,13 @@
 
 
 body {
-    overflow: scroll;
+    overflow-y: scroll;
     animation: transitionIn_body 1s;
     z-index:10;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    
 }
 
 header {
@@ -38,23 +37,14 @@ header {
     
     text-align: center;
     align-items: center;
-    overflow: hidden;
     display:flex;
     flex-direction: column;
     height:100vh;
     padding-left: 10px;
     padding-right: 10px;
     z-index:10;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-image: 
-    linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("../assets/maki-sushi-roll-with-cucumber-classic-japanese-cuisine-food-delivery-.jpg");
-    */
+    overflow: hidden;
+
 }
 
 
@@ -241,6 +231,12 @@ nav li button {
 
 }
 
+.separation_line {
+    padding: 0.5vh;
+    background-color: rgb(83, 133, 133);
+
+}
+
 .contact_header{
     padding-top: 8vh;
     color:white;
@@ -309,15 +305,14 @@ nav li button {
     ),
     url("../assets/background/sushi-contact.png");
     background-position: center;
-    width:100vw;
 }
+
 .credentials{
-    left:0;
-    bottom:-100vh;
+    
     color:aliceblue;
-    position: absolute;
+    margin-top: auto;
+    margin-bottom: 1vh;
     font-size: 14px;
-    padding-left: 1vw;
     font-family: "Calibri";
 }
 .social{

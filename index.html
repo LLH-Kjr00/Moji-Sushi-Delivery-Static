@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class = first_page>
-        <header> 
+    <div class=first_page>
+        <header>
             <img class="logo_pic" src="./assets/logo.png">
             <nav>
                 <ul class="nav_links">
@@ -22,34 +22,35 @@
                     <li><button class="contact">Contact</button></li>
                 </ul>
             </nav>
-            <img class = "side_icon" src = "assets/sidebar.png" onclick = showSidebar()>
-            <ul class = "sidebar">
-                <img class = "cancel_icon" src = "assets/cancel.png" onclick = hideSidebar()>
+            <img class="side_icon" src="assets/sidebar.png" onclick=showSidebar()>
+            <ul class="sidebar">
+                <img class="cancel_icon" src="assets/cancel.png" onclick=hideSidebar()>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./gallery/gallery.html">Gallery</a></li>
-                <li><button class = "contact">Contact</button></li>
+                <li><button class="contact">Contact</button></li>
             </ul>
         </header>
         <div class="container">
-            <div class = "logo">
-                <img class = "logo_svg" src="./assets/logo.svg" viewbox = "20vh">
+            <div class="logo">
+                <img class="logo_svg" src="./assets/logo.svg" viewbox="20vh">
             </div>
-                
+
             <div class="text">
-                <p class = "title">this is </p>
-                <p class = "title">how we roll </p>
-                <p class = "motto">Enjoy our freshly hand-made sushi, delivered straight to your door.</p>
-            
+                <p class="title">this is </p>
+                <p class="title">how we roll </p>
+                <p class="motto">Enjoy our freshly hand-made sushi, delivered straight to your door.</p>
+
             </div>
-        
+
             <button class="order">Online Bestellen</button>
         </div>
     </div>
-    <div class = "second_page">
+    <div class="separation_line"></div>
+    <div class="second_page">
         <div class="contact_header">
             Contact Us
         </div>
-        <div class = "contact_details">
+        <div class="contact_details">
             <div class="left">
                 <div class="contact_section">
                     <p class="section_header">Telephone:</p>
@@ -71,7 +72,7 @@
                     <a href="https://www.instagram.com/moji_sushi/"><img class="logo_pic" src="./assets/ig.png"></a>
                 </div>
             </div>
-            <div class = "right">
+            <div class="right">
                 123
             </div>
         </div>
@@ -84,14 +85,15 @@
 </html>
 
 <script>
-    function showSidebar(){
+    function showSidebar() {
         const sidebar = document.querySelector('.sidebar')
         /*sidebar.style.display = "flex"*/
         sidebar.style.height = "100vh"
-        sidebar.style.right="0"
+        sidebar.style.right = "0"
     }
-    function hideSidebar(){
+    function hideSidebar() {
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.right = "-100vw"
     }
+
 </script>
