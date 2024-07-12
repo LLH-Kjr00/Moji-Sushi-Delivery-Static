@@ -25,7 +25,7 @@
                 <ul class="nav_links">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../gallery/gallery.html">Gallery</a></li>
-                    <li><button class="contact">Contact</button></li>
+                    <li><button class="contact" onclick=scrollToElement()>Contact</button></li>
                 </ul>
             </nav>
             <img class="side_icon" src="../assets/sidebar.png" onclick=showSidebar()>
@@ -33,7 +33,7 @@
                 <img class="cancel_icon" src="../assets/cancel.png" onclick=hideSidebar()>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../gallery/gallery.html">Gallery</a></li>
-                <li><button class="contact">Contact</button></li>
+                <li><button class="contact" onclick=scrollToElement()>Contact</button></li>
             </ul>
         </header>
         <div class="container">
@@ -199,6 +199,12 @@
         sidebar.style.right = "-100vw"
 
     }
+    function scrollToElement(){
+        var elmnt = document.getElementsByClassName("second_page")[0];
+        elmnt.scrollIntoView({behavior:'smooth', block:"start"});//, block:'center', inline:'center'});
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.right = "-100vw"
+    }
 
     function initSlider() {
         const imageList = document.querySelector(".slider-wrapper .image-list");
@@ -280,38 +286,3 @@
     window.addEventListener("load", initSlider);
 </script>
 
-<!-- 
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/5.jpg" alt="img-5" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/6.jpg" alt="img-6" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/7.jpg" alt="img-7" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/8.jpg" alt="img-8" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/9.jpg" alt="img-9" />
-
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/10.jpg" alt="img-10" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/11.jpg" alt="img-11" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/12.jpg" alt="img-12" />                        <img class="image-item" loading="lazy" src="../assets//dummy_pic/13.jpg" alt="img-13" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/14.jpg" alt="img-14" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/15.jpg" alt="img-15" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/16.jpg" alt="img-16" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/17.jpg" alt="img-17" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/18.jpg" alt="img-18" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/19.jpg" alt="img-19" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/20.jpg" alt="img-20" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/21.jpg" alt="img-21" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/22.jpg" alt="img-22" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/23.jpg" alt="img-23" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/24.jpg" alt="img-24" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/25.jpg" alt="img-25" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/26.jpg" alt="img-26" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/27.jpg" alt="img-27" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/28.jpg" alt="img-28" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/29.jpg" alt="img-29" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/30.jpg" alt="img-30" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/31.jpg" alt="img-31" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/32.jpg" alt="img-32" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/33.jpg" alt="img-33" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/34.jpg" alt="img-34" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/35.jpg" alt="img-35" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/36.jpg" alt="img-36" />
-                    <img class="image-item" loading="lazy" src="../assets//dummy_pic/37.jpg" alt="img-37" />
-                    -->

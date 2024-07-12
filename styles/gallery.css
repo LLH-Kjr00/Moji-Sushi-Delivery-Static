@@ -115,6 +115,13 @@
 }
 
 
+@media(max-width: 800px){
+   
+  .slider-scrollbar .scrollbar-thumb {
+    width: 25/4%
+  }
+  
+}
 
 @font-face {
   font-family: "paint";
