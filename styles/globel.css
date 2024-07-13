@@ -308,13 +308,14 @@ nav li button {
 }
 
 .credentials{
-    
+    left:0;
+    bottom:-100vh;
     color:aliceblue;
-    margin-bottom: 1vh;
+    position: absolute;
     font-size: 14px;
+    padding-left: 1vw;
     font-family: "Calibri";
-    margin-top: auto;
-    
+    padding-bottom: 1vh;
 }
 .social{
     display:flex;
