@@ -76,12 +76,6 @@
     background: linear-gradient(to bottom right, rgba(61, 167, 167,1), rgb(40, 197, 197));
 }
 
-.order:hover {
-    /*background-color: rgba(48, 236, 236, 0.9);*/
-    
-}
-
-
 @font-face{
     font-family: "paint";
     src:url("../assets/special_font/PAINP___.TTF") format('truetype')
