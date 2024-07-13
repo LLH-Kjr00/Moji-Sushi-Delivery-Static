@@ -38,11 +38,11 @@
                 <div class='images'>
 
                     <img id="previous_pic" loading="eager" src="../assets/dummy_pic/1.jpg"
-                        alt="This is the description for sushi No.1" onclick=handleClickPhoto(this.alt)>
+                        alt="This is the description for sushi No.1">
                     <img id="current_pic" loading="eager" src="../assets/dummy_pic/2.jpg"
-                        alt="This is the description for sushi No.2" onclick=handleClickPhoto(this.alt)>
+                        alt="This is the description for sushi No.2">
                     <img id="next_pic" loading="eager" src="../assets/dummy_pic/3.jpg"
-                        alt="This is the description for sushi No.3" onclick=handleClickPhoto(this.alt)>
+                        alt="This is the description for sushi No.3">
                 </div>
 
             </div>
@@ -54,7 +54,7 @@
                     This is the description for sushi No.2
                 </div>
 
-                <img class="slide-button" id="next-slide" src="../assets/new_arrow.png" alt="previous arrow icon"
+                <img class="slide-button" id="next-slide" src="../assets/new_arrow.png" alt="next arrow icon"
                     onclick=change_pic_next()>
             </div>
 
@@ -116,6 +116,7 @@
 
     let prevPicRef, currPicRef, nextPicRef;
     const maximum_num = 15;
+    const window_width = window.innerWidth;
     const contentDiv = document.querySelector('.description');
 
 
@@ -140,7 +141,7 @@
 
 
 
-        if (window.innerWidth > 800) {
+        if (window_width > 800) {
 
 
             prevPicSrc = `../assets/dummy_pic/${curr_idx % maximum_num}.jpg`;
@@ -260,7 +261,7 @@
 
         let prevPicSrc, currPicSrc, nextPicSrc;
 
-        if (window.innerWidth > 800) {
+        if (window_width > 800) {
 
 
             if (curr_idx <= 1) {
