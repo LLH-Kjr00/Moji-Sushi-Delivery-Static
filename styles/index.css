@@ -46,6 +46,8 @@
     padding-bottom: 2vh;
     font-size: 16px;
     /*font-family: "paint";*/
+   
+    
 }
 .title br{
  display:none;
@@ -74,6 +76,12 @@
     background: linear-gradient(to bottom right, rgba(61, 167, 167,1), rgb(40, 197, 197));
 }
 
+.order:hover {
+    /*background-color: rgba(48, 236, 236, 0.9);*/
+    
+}
+
+
 @font-face{
     font-family: "paint";
     src:url("../assets/special_font/PAINP___.TTF") format('truetype')
@@ -82,7 +90,102 @@
     font-family: "brush";
     src:url("../assets/special_font/Brushstrike\ trial.ttf") format('truetype')
 }
+.contact_header{
+    padding-top: 8vh;
+    color:white;
+    font-family: "brush";
+    font-size: 55px;
+    padding-bottom:10vh;
+    /*border-bottom: 1px solid white;*/
+}
 
+.contact_details{
+    
+    color:white;
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:100vw;
+    justify-content: center;
+}
+
+.left{
+    width:100%;
+    height:100%;
+    align-items: center;
+}
+.right{
+    width:100%;
+    height:100%;
+    align-items:center;
+    display:none
+}
+
+.contact_section{
+    padding-bottom: 3vh;
+    
+}
+.section_header{
+    font-family: "brush";
+    font-size: 35px;
+    padding-bottom: 1vh;
+}
+.section_value{
+    font-size: 20px;
+    font-family:"Calibri";
+    pointer-events: none;
+}
+.element >a{
+    text-decoration: none;
+    color:inherit;
+}
+.second_page{
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index:10;
+    background-size: cover;
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../assets/sushi-contact.png");
+    background-position: center;
+    width:100vw;
+}
+.credentials{
+    left:0;
+    bottom:-100vh;
+    color:aliceblue;
+    position: absolute;
+    font-size: 14px;
+    padding-left: 1vw;
+    font-family: "Calibri";
+    padding-bottom: 1vh;
+}
+.social{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+}
+.social img{
+    width: 25px;
+    height:25px;
+    margin-left: 10px;
+    margin-right:10px;
+    
+}
+.social a{
+    -webkit-tap-highlight-color: transparent;
+}
 
 @media(max-width: 800px){
    
@@ -101,7 +204,17 @@
     .title br{
         display:block;
     }
-    
+    .contact_header{
+        padding-top: 8vh;
+        padding-bottom:8vh;
+    }
+    .second_page{
+        background-position: center;
+    }
+    .credentials{
+        padding-bottom: 2vh;
+        padding-left:2vh;
+    }
 }
 
 

@@ -115,6 +115,7 @@
     }
 
     let prevPicRef, currPicRef, nextPicRef;
+    const maximum_num = 15;
     const contentDiv = document.querySelector('.description');
 
 
@@ -142,17 +143,17 @@
         if (window.innerWidth > 800) {
 
 
-            prevPicSrc = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
-            currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
-            nextPicSrc = `../assets/dummy_pic/${(curr_idx + 2) % 38}.jpg`;
+            prevPicSrc = `../assets/dummy_pic/${curr_idx % maximum_num}.jpg`;
+            currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % maximum_num}.jpg`;
+            nextPicSrc = `../assets/dummy_pic/${(curr_idx + 2) % maximum_num}.jpg`;
 
             prevPicRef.src = prevPicSrc;
             currPicRef.src = currPicSrc;
             nextPicRef.src = nextPicSrc;
 
-            prevPicRef.alt = `This is the description for sushi No.${curr_idx % 38}`;
-            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % 38}`;
-            nextPicRef.alt = `This is the description for sushi No.${(curr_idx + 2) % 38}`;
+            prevPicRef.alt = `This is the description for sushi No.${curr_idx % maximum_num}`;
+            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % maximum_num}`;
+            nextPicRef.alt = `This is the description for sushi No.${(curr_idx + 2) % maximum_num}`;
 
 
             contentDiv.textContent = currPicRef.alt
@@ -213,9 +214,9 @@
             nextPicRef.style.opacity = '1';
         }
         else {
-            currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
+            currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % maximum_num}.jpg`;
             currPicRef.src = currPicSrc;
-            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % 38}`;
+            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % maximum_num}`;
             contentDiv.textContent = currPicRef.alt
             currPicRef.addEventListener('load', () => {
                 const curr_pic_ani_exit = currPicRef.animate(
@@ -263,22 +264,22 @@
 
 
             if (curr_idx <= 1) {
-                prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2 + 38) % 38}.jpg`;
-                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
-                nextPicSrc = `../assets/dummy_pic/${(curr_idx + 38) % 38}.jpg`;
+                prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2 + maximum_num) % maximum_num}.jpg`;
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + maximum_num) % maximum_num}.jpg`;
+                nextPicSrc = `../assets/dummy_pic/${(curr_idx + maximum_num) % maximum_num}.jpg`;
 
-                prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2 + 38) % 38}`;
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + 38) % 38}`;
-                nextPicRef.alt = `This is the description for sushi No.${(curr_idx + 38) % 38}`;
+                prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2 + maximum_num) % maximum_num}`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + maximum_num) % maximum_num}`;
+                nextPicRef.alt = `This is the description for sushi No.${(curr_idx + maximum_num) % maximum_num}`;
             }
             else {
-                prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2) % 38}.jpg`;
-                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
-                nextPicSrc = `../assets/dummy_pic/${(curr_idx) % 38}.jpg`;
+                prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2) % maximum_num}.jpg`;
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % maximum_num}.jpg`;
+                nextPicSrc = `../assets/dummy_pic/${(curr_idx) % maximum_num}.jpg`;
 
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % 38}`;
-                prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2) % 38}`;
-                nextPicRef.alt = `This is the description for sushi No.${(curr_idx) % 38}`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % maximum_num}`;
+                prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2) % maximum_num}`;
+                nextPicRef.alt = `This is the description for sushi No.${(curr_idx) % maximum_num}`;
             }
             currPicRef.src = currPicSrc;
             prevPicRef.src = prevPicSrc;
@@ -343,14 +344,14 @@
         else {
             if (curr_idx <= 1) {
 
-                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + 38) % 38}`;
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + maximum_num) % maximum_num}.jpg`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + maximum_num) % maximum_num}`;
 
 
             }
             else {
-                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % 38}`;
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % maximum_num}.jpg`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % maximum_num}`;
 
 
             }
