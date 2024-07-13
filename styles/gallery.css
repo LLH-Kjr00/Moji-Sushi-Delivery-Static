@@ -4,6 +4,7 @@
     linear-gradient(rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
     url("../assets/background/sushi\ \(2\).png");
+  background-position: center;
 }
 
 .title {
@@ -11,7 +12,7 @@
   font-size: 55px;
   color: white;
   padding: 5vh;
-
+  padding-top: 2vh;
 }
 
 .slide-container {
@@ -51,8 +52,9 @@
   align-items: center;
   justify-content: center;
 }
+
 .description {
-  color:white
+  color: white
 }
 
 .slide-button {
@@ -93,14 +95,14 @@
 .slider-scrollbar .scrollbar-track {
   height: 6px;
   width: 100%;
-  background-color: white;
+  background-color:rgba(255,255,255,0.6);
 }
 
 .slider-scrollbar .scrollbar-thumb {
   height: 6px;
   width: 25%;
   position: relative;
-  background-color: rgb(83, 133, 133);
+  background-color: rgba(22, 23, 23, 0.6);
   border-radius: inherit;
   cursor: grab;
   cursor: -moz-grab;
@@ -115,12 +117,16 @@
 }
 
 
-@media(max-width: 800px){
-   
+.title{
+  padding-top: 5vh;
+}
+
+@media(max-width: 800px) {
+
   .slider-scrollbar .scrollbar-thumb {
     width: 25/4%
   }
-  
+
 }
 
 @font-face {

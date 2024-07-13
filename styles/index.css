@@ -22,7 +22,6 @@ body {
     ),
     url("../assets/background/sushi-file.jpg");
     height:100vh;
-    overflow: hidden;
 }
 
 .logo{
