@@ -277,6 +277,33 @@
                 prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2) % 38}`;
                 nextPicRef.alt = `This is the description for sushi No.${(curr_idx) % 38}`;
             }
+            currPicRef.src = currPicSrc;
+
+            contentDiv.textContent = currPicRef.alt
+
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+            const contentDivAni = contentDiv.animate(
+                [
+                    { opacity: 0 },
+                    { opacity: 1 }
+                ],
+                {
+                    duration: 750,
+                    easing: 'ease-in-out'
+                }
+            );
+            currPicRef.style.opacity = '1';
             prevPicRef.src = prevPicSrc;
             nextPicRef.src = nextPicSrc;
             prevPicRef.addEventListener('load', () => {
