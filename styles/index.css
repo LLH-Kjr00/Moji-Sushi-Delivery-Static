@@ -14,21 +14,22 @@ body {
 }
 
 .first_page{
-    background-size: cover;
+    background-size:cover;
     background-image:
     linear-gradient(
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),
-    url("../assets/background/sushi-file.jpg");
+    url("../assets/sushi-file.jpg");
     height:100vh;
+    
 }
 
 .logo{
-    padding-top: 4vh;
+    padding-top: 2vh;
     height: 30vh;
     width: 100%;
-    padding-bottom: 4vh;
+    padding-bottom: 2vh;
     /*background-color: antiquewhite;*/
 }
 .logo_svg{
@@ -37,17 +38,16 @@ body {
 }
 .text {
     color: white;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
     /*padding-top: 10vh;*/
     align-items: center;
-    /*background-color: brown;*/
 }
 
 .text .title{
     font-family: "brush";
     padding-bottom: 2vh;
     font-size: 60px;
-
+    
 }
 .text .motto{
     
@@ -55,6 +55,14 @@ body {
     font-size: 16px;
     /*font-family: "paint";*/
    
+    
+}
+.title br{
+ display:none;
+}
+.link{
+    -webkit-tap-highlight-color: transparent;
+    width:100%;
     
 }
 .order {
@@ -66,19 +74,18 @@ body {
     transition: 0.5s;
     border-radius: 2px;
     font-family: "Calibri";
-    font-size: 19px;
+    font-size: 18px;
     color:white;
     -webkit-tap-highlight-color: transparent;
 
     border-radius: 3px;
     border:none;
     background-color: rgba(61, 167, 167,1);
-    
+    background: linear-gradient(to bottom right, rgba(61, 167, 167,1), rgb(40, 197, 197));
 }
 
 .order:hover {
-    /*background-color: rgba(61, 167, 167, 0.9);*/
-    background-color: rgb(61, 167, 167);
+    /*background-color: rgba(48, 236, 236, 0.9);*/
     
 }
 
@@ -91,6 +98,102 @@ body {
     font-family: "brush";
     src:url("../assets/special_font/Brushstrike\ trial.ttf") format('truetype')
 }
+.contact_header{
+    padding-top: 8vh;
+    color:white;
+    font-family: "brush";
+    font-size: 55px;
+    padding-bottom:10vh;
+    /*border-bottom: 1px solid white;*/
+}
+
+.contact_details{
+    
+    color:white;
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    width:100vw;
+    justify-content: center;
+}
+
+.left{
+    width:100%;
+    height:100%;
+    align-items: center;
+}
+.right{
+    width:100%;
+    height:100%;
+    align-items:center;
+    display:none
+}
+
+.contact_section{
+    padding-bottom: 3vh;
+    
+}
+.section_header{
+    font-family: "brush";
+    font-size: 35px;
+    padding-bottom: 1vh;
+}
+.section_value{
+    font-size: 20px;
+    font-family:"Calibri";
+    pointer-events: none;
+}
+.element >a{
+    text-decoration: none;
+    color:inherit;
+}
+.second_page{
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index:10;
+    background-size: cover;
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("../assets/sushi-contact.png");
+    background-position: center;
+    width:100vw;
+}
+.credentials{
+    left:0;
+    bottom:-100vh;
+    color:aliceblue;
+    position: absolute;
+    font-size: 14px;
+    padding-left: 1vw;
+    font-family: "Calibri";
+}
+.social{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+}
+.social img{
+    width: 25px;
+    height:25px;
+    margin-left: 10px;
+    margin-right:10px;
+    
+}
+.social a{
+    -webkit-tap-highlight-color: transparent;
+}
+
 @media(max-width: 800px){
    
     .order{
@@ -103,22 +206,26 @@ body {
     }
     .text .title{
         font-size: 50px;
+        line-height: 1.2;
     }
-    
+    .title br{
+        display:block;
+    }
+    .contact_header{
+        padding-top: 8vh;
+        padding-bottom:8vh;
+    }
+    .second_page{
+        background-position: center;
+    }
+    .credentials{
+        padding-bottom: 2vh;
+        padding-left:2vh;
+    }
 }
 
-.second_page{
-    text-align: center;
-    align-items: center;
-    overflow: hidden;
-    display:flex;
-    flex-direction: column;
-    height:100vh;
-    padding-left: 10px;
-    padding-right: 10px;
-    z-index:10;
 
-    
+@font-face{
+    font-family: "Calibri";
+    src: url(../assets/calibri.ttf) format('truetype')
 }
-
-
