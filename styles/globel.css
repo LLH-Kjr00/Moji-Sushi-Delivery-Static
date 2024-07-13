@@ -238,11 +238,11 @@ nav li button {
 }
 
 .contact_header{
-    padding-top: 8vh;
+    padding-top: 4vh;
     color:white;
     font-family: "brush";
     font-size: 55px;
-    padding-bottom:10vh;
+    padding-bottom:5vh;
     /*border-bottom: 1px solid white;*/
 }
 
@@ -308,11 +308,12 @@ nav li button {
 }
 
 .credentials{
-    
+    left:0;
+    bottom:-100vh;
     color:aliceblue;
-    margin-top: auto;
-    margin-bottom: 1vh;
+    position: absolute;
     font-size: 14px;
+    padding-left: 1vw;
     font-family: "Calibri";
 }
 .social{

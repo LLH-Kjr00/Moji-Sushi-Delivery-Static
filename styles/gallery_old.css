@@ -1,0 +1,97 @@
+.first_page {
+    background-size: cover;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url("../assets/background/sushi\ \(2\).png");
+    height: 100vh;
+}
+
+
+
+.title {
+    font-family: "brush";
+    font-size: 55px;
+    color: white;
+    padding: 5vh;
+    padding-top: 2vh;
+  }
+
+.display_frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.images img {
+    height: 60vh;
+    width: 60vh;
+    padding: 3%;
+    object-fit: fill;
+
+}
+
+#previous_pic,
+#next_pic {
+    height: 50vh;
+    width: 50vh;
+}
+
+.arrows {
+    height: 30vh;
+    width: 20vh;
+}
+
+#prev-slide {
+    transform: rotateY(180deg);
+}
+
+
+
+.content_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    color: white
+}
+
+.slide-button {
+    height: 8vh;
+    width: 8vh;
+    cursor: pointer;
+    align-items: center;
+    margin: 3vh;
+    user-select: none;
+}
+
+@media(max-width: 800px) {
+
+    .images img {
+        height: 45vh;
+        width: 45vh;
+        padding: 3%;
+        object-fit: fill;
+    
+    }
+    #previous_pic,
+    #next_pic {
+        display: none;
+    }
+}
+
+
+@font-face {
+    font-family: "paint";
+    src: url("../assets/special_font/PAINP___.TTF") format('truetype')
+}
