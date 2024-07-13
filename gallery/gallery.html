@@ -164,7 +164,7 @@
                 const prev_pic_ani_exit = prevPicRef.animate(
                     [
                         { transform: 'translateX(-100%)', opacity: 0 },
-                        { transform: 'translateX(0)', opacity: 1 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
                     ],
                     {
                         duration: 1000,
@@ -190,7 +190,7 @@
                 const next_pic_ani_exit = nextPicRef.animate(
                     [
                         { transform: 'translateX(-100%)', opacity: 0 },
-                        { transform: 'translateX(0)', opacity: 1 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
                     ],
                     {
                         duration: 2000,
@@ -210,9 +210,9 @@
                 }
             );
 
-            prevPicRef.style.opacity = '1';
+            prevPicRef.style.opacity = '0.5';
             currPicRef.style.opacity = '1';
-            nextPicRef.style.opacity = '1';
+            nextPicRef.style.opacity = '0.5';
         }
         else {
             currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % maximum_num}.jpg`;
@@ -294,7 +294,7 @@
                 const prev_pic_ani_exit = prevPicRef.animate(
                     [
                         { transform: 'translateX(100%)', opacity: 0 },
-                        { transform: 'translateX(0)', opacity: 1 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
                     ],
                     {
                         duration: 1000,
@@ -318,7 +318,7 @@
                 const next_pic_ani_exit = nextPicRef.animate(
                     [
                         { transform: 'translateX(100%)', opacity: 0 },
-                        { transform: 'translateX(0)', opacity: 1 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
                     ],
                     {
                         duration: 2000,
@@ -337,9 +337,9 @@
                     easing: 'ease-in-out'
                 }
             );
-            prevPicRef.style.opacity = '1';
+            prevPicRef.style.opacity = '0.5';
             currPicRef.style.opacity = '1';
-            nextPicRef.style.opacity = '1';
+            nextPicRef.style.opacity = '0.5';
 
         }
         else {

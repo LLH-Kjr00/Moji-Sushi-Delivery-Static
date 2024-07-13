@@ -33,8 +33,7 @@
 .images img {
     height: 60vh;
     width: 60vh;
-    padding: 3%;
-    object-fit: fill;
+    object-fit: cover;
 
 }
 
@@ -42,6 +41,7 @@
 #next_pic {
     height: 50vh;
     width: 50vh;
+    opacity: 0.5;
 }
 
 .arrows {
