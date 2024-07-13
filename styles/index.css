@@ -14,7 +14,7 @@ body {
 }
 
 .first_page{
-    background-size: auto;
+    background-size: cover;
     background-image:
     linear-gradient(
         rgba(0,0,0,0.5),
