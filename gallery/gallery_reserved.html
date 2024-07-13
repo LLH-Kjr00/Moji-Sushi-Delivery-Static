@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/globel.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body class="body">
+    <div class=first_page>
+        <header>
+
+            <img class="logo_pic" src="../assets/logo.png">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../gallery/gallery.html">Gallery</a></li>
+                    <li><button class="contact" onclick=scrollToElement()>Contact</button></li>
+                </ul>
+            </nav>
+            <img class="side_icon" src="../assets/sidebar.png" onclick=showSidebar()>
+            <ul class="sidebar">
+                <img class="cancel_icon" src="../assets/cancel.png" onclick=hideSidebar()>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><button class="contact" onclick=scrollToElement()>Contact</button></li>
+            </ul>
+        </header>
+        <div class="container">
+            <h1 class='title'>Gallery</h1>
+            <div class="slide-container">
+
+                <div class="slider-wrapper">
+
+                    <div class="image-list">
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/0.jpg"
+                            alt="This is the description for sushi No.0" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/1.jpg"
+                            alt="This is the description for sushi No.1" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/2.jpg"
+                            alt="This is the description for sushi No.2" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/3.jpg"
+                            alt="This is the description for sushi No.3" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/4.jpg"
+                            alt="This is the description for sushi No.4" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/5.jpg"
+                            alt="This is the description for sushi No.5" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/6.jpg"
+                            alt="This is the description for sushi No.6" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/7.jpg"
+                            alt="This is the description for sushi No.7" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/8.jpg"
+                            alt="This is the description for sushi No.8" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/9.jpg"
+                            alt="This is the description for sushi No.9" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/10.jpg"
+                            alt="This is the description for sushi No.10" onclick=handleClickPhoto(this.alt) />
+
+                        <!--<img class="image-item" loading="lazy" src="../assets/dummy_pic/11.jpg"
+                            alt="This is the description for sushi No.11" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/12.jpg"
+                            alt="This is the description for sushi No.12" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/13.jpg"
+                            alt="This is the description for sushi No.13" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/14.jpg"
+                            alt="This is the description for sushi No.14" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/15.jpg"
+                            alt="This is the description for sushi No.15" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/16.jpg"
+                            alt="This is the description for sushi No.16" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/17.jpg"
+                            alt="This is the description for sushi No.17" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/18.jpg"
+                            alt="This is the description for sushi No.18" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/19.jpg"
+                            alt="This is the description for sushi No.19" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/20.jpg"
+                            alt="This is the description for sushi No.20" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/21.jpg"
+                            alt="This is the description for sushi No.21" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/22.jpg"
+                            alt="This is the description for sushi No.22" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/23.jpg"
+                            alt="This is the description for sushi No.23" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/24.jpg"
+                            alt="This is the description for sushi No.24" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/25.jpg"
+                            alt="This is the description for sushi No.25" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/26.jpg"
+                            alt="This is the description for sushi No.26" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/27.jpg"
+                            alt="This is the description for sushi No.27" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/28.jpg"
+                            alt="This is the description for sushi No.28" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/29.jpg"
+                            alt="This is the description for sushi No.29" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/30.jpg"
+                            alt="This is the description for sushi No.30" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/31.jpg"
+                            alt="This is the description for sushi No.31" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/32.jpg"
+                            alt="This is the description for sushi No.32" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/33.jpg"
+                            alt="This is the description for sushi No.33" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/34.jpg"
+                            alt="This is the description for sushi No.34" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/35.jpg"
+                            alt="This is the description for sushi No.35" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/36.jpg"
+                            alt="This is the description for sushi No.36" onclick=handleClickPhoto(this.alt) />
+                        <img class="image-item" loading="lazy" src="../assets/dummy_pic/37.jpg"
+                            alt="This is the description for sushi No.37" onclick=handleClickPhoto(this.alt) />
+                            -->
+                    </div>
+
+                </div>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                </div>
+                <div class="contain_wrapper">
+
+                    <img class="slide-button" id="prev-slide" src="../assets/new_arrow.png" alt="previous arrow icon">
+                    <div class="description">
+                        
+                    </div>
+
+                    <img class="slide-button" id="next-slide" src="../assets/new_arrow.png" alt="previous arrow icon">
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="second_page">
+        <div class="contact_header">
+            Contact Us
+        </div>
+        <div class="contact_details">
+            <div class="left">
+                <div class="contact_section">
+                    <p class="section_header">Telephone:</p>
+                    <p class="section_value">040 521 629 69</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Email</p>
+                    <p class="section_value">???@gmail.com</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Adresse</p>
+                    <p class="section_value">Alsterdorfer Straße 263, Hamburg, Germany 22297</p>
+                </div>
+                <div class="contact_section">
+                    <p class="section_header">Öffnungszeiten</p>
+                    <p class="section_value">Di-Do: 16:00-21:30 und Fr-So: 16:00-22:00</p>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/moji_sushi/"><img class="logo_pic" src="../assets/ig.png"></a>
+                </div>
+            </div>
+            <div class="right">
+                123
+            </div>
+        </div>
+        <div class="credentials">
+            2024 Powered By M&P Services
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        /*sidebar.style.display = "flex"*/
+        sidebar.style.height = "100vh"
+        sidebar.style.right = "0"
+
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.right = "-100vw"
+
+    }
+    function scrollToElement(){
+        var elmnt = document.getElementsByClassName("second_page")[0];
+        elmnt.scrollIntoView({behavior:'smooth', block:"start"});//, block:'center', inline:'center'});
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.right = "-100vw"
+    }
+
+    function initSlider() {
+        const imageList = document.querySelector(".slider-wrapper .image-list");
+        const slideButtons = document.querySelectorAll(".slide-button");
+        const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+        // Handle scrollbar thumb drag
+        scrollbarThumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = scrollbarThumb.offsetLeft;
+            const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+
+            // Update thumb position on mouse move
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+                // Ensure the scrollbar thumb stays within bounds
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+                scrollbarThumb.style.left = `${boundedPosition}px`;
+                imageList.scrollLeft = scrollPosition;
+            }
+            // Remove event listeners on mouse up
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+
+            }
+            // Add event listeners for drag interaction
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+        // Slide images according to the slide button clicks
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
+
+        // Update scrollbar thumb position based on image scroll
+        function updateScrollThumbPosition() {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
+        }
+        // Call these two functions when image list scrolls
+        imageList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+        });
+    }
+
+    function handleClickPhoto(pic_alt) {
+
+
+        const contentDiv = document.querySelector('.description');
+
+        contentDiv.textContent = pic_alt;
+
+        const contentDivAni = contentDiv.animate(
+            [
+                { opacity: 0 },
+                { opacity: 1 }
+            ],
+            {
+                duration: 750,
+                easing: 'ease-in-out'
+            }
+        );
+
+    }
+
+
+    window.addEventListener("resize", initSlider);
+    window.addEventListener("load", initSlider);
+</script>
+
