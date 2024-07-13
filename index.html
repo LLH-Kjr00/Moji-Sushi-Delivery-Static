@@ -26,8 +26,8 @@
             <ul class="sidebar">
                 <img class="cancel_icon" src="assets/cancel.png" onclick=hideSidebar()>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./gallery/gallery.html">Gallery</a></li>
-                <li onclick=scrollToElement()><button class="contact" >Contact</button></li>
+                <li><a href="./gallery/gallery_old.html">Gallery</a></li>
+                <li onclick=scrollToElement()><button class="contact">Contact</button></li>
             </ul>
         </header>
         <div class="container">
@@ -36,13 +36,12 @@
             </div>
 
             <div class="text">
-                <p class="title">this is </p>
-                <p class="title">how we roll </p>
+                <p class="title">this is <br>how we roll</p>
                 <p class="motto">Enjoy our freshly hand-made sushi, delivered straight to your door.</p>
 
             </div>
+            <a class = "link" href="https://shop.moji-sushi.de/storedata/listStore"><button class="order">Online Bestellen</button></a>
 
-            <button class="order" onclick="location.href = 'https://shop.moji-sushi.de/storedata/listStore';">Online Bestellen</button>
         </div>
     </div>
     <div class="second_page">
@@ -52,7 +51,7 @@
         <div class="contact_details">
             <div class="left">
                 <div class="contact_section">
-                    <p class="section_header">Telephone:</p>
+                    <p class="section_header">Telefon:</p>
                     <p class="section_value">040 521 629 69</p>
                 </div>
                 <div class="contact_section">
@@ -94,9 +93,9 @@
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.right = "-100vw"
     }
-    function scrollToElement(){
+    function scrollToElement() {
         var elmnt = document.getElementsByClassName("second_page")[0];
-        elmnt.scrollIntoView({behavior:'smooth', block:"start"});//, block:'center', inline:'center'});
+        elmnt.scrollIntoView({ behavior: 'smooth', block: "start" });//, block:'center', inline:'center'});
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.right = "-100vw"
     }

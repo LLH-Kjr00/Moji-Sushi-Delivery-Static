@@ -231,18 +231,13 @@ nav li button {
 
 }
 
-.separation_line {
-    padding: 0.5vh;
-    background-color: rgb(83, 133, 133);
-
-}
 
 .contact_header{
-    padding-top: 4vh;
+    padding-top: 8vh;
     color:white;
     font-family: "brush";
     font-size: 55px;
-    padding-bottom:5vh;
+    padding-bottom:10vh;
     /*border-bottom: 1px solid white;*/
 }
 
@@ -315,6 +310,7 @@ nav li button {
     font-size: 14px;
     padding-left: 1vw;
     font-family: "Calibri";
+    padding-bottom: 1vh;
 }
 .social{
     display:flex;
@@ -333,7 +329,21 @@ nav li button {
     -webkit-tap-highlight-color: transparent;
 }
 
-
+@media(max-width: 800px){
+   
+    
+    .contact_header{
+        padding-top: 8vh;
+        padding-bottom:8vh;
+    }
+    .second_page{
+        background-position: center;
+    }
+    .credentials{
+        padding-bottom: 2vh;
+        padding-left:2vh;
+    }
+}
 
 @keyframes transitionIn_body {
     from {

@@ -6,7 +6,7 @@
 
 
 .first_page{
-    background-size: cover;
+    background-size:cover;
     background-image:
     linear-gradient(
         rgba(0,0,0,0.5),
@@ -14,13 +14,14 @@
     ),
     url("../assets/background/sushi-file.jpg");
     height:100vh;
+    
 }
 
 .logo{
-    padding-top: 4vh;
+    padding-top: 2vh;
     height: 30vh;
     width: 100%;
-    padding-bottom: 4vh;
+    padding-bottom: 2vh;
     /*background-color: antiquewhite;*/
 }
 .logo_svg{
@@ -29,24 +30,29 @@
 }
 .text {
     color: white;
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
     /*padding-top: 10vh;*/
     align-items: center;
-    /*background-color: brown;*/
 }
 
 .text .title{
     font-family: "brush";
     padding-bottom: 2vh;
     font-size: 60px;
-
+    
 }
 .text .motto{
     
     padding-bottom: 2vh;
     font-size: 16px;
     /*font-family: "paint";*/
-   
+}
+.title br{
+ display:none;
+}
+.link{
+    -webkit-tap-highlight-color: transparent;
+    width:100%;
     
 }
 .order {
@@ -58,22 +64,15 @@
     transition: 0.5s;
     border-radius: 2px;
     font-family: "Calibri";
-    font-size: 19px;
+    font-size: 18px;
     color:white;
     -webkit-tap-highlight-color: transparent;
 
     border-radius: 3px;
     border:none;
     background-color: rgba(61, 167, 167,1);
-    
+    background: linear-gradient(to bottom right, rgba(61, 167, 167,1), rgb(40, 197, 197));
 }
-
-.order:hover {
-    /*background-color: rgba(61, 167, 167, 0.9);*/
-    background-color: rgb(61, 167, 167);
-    
-}
-
 
 @font-face{
     font-family: "paint";
@@ -83,6 +82,8 @@
     font-family: "brush";
     src:url("../assets/special_font/Brushstrike\ trial.ttf") format('truetype')
 }
+
+
 @media(max-width: 800px){
    
     .order{
@@ -95,22 +96,16 @@
     }
     .text .title{
         font-size: 50px;
+        line-height: 1.2;
+    }
+    .title br{
+        display:block;
     }
     
 }
 
-.second_page{
-    text-align: center;
-    align-items: center;
-    overflow: hidden;
-    display:flex;
-    flex-direction: column;
-    height:100vh;
-    padding-left: 10px;
-    padding-right: 10px;
-    z-index:10;
 
-    
+@font-face{
+    font-family: "Calibri";
+    src: url(../assets/calibri.ttf) format('truetype')
 }
-
-
