@@ -3,15 +3,7 @@
     margin:0px;
     box-sizing: border-box;
 }
-body {
-    /*background-size:50%;
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("../assets/sushi-file.jpg")*/
-}
+
 
 .first_page{
     background-size: cover;
