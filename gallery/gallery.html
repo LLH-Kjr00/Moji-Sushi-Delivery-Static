@@ -39,10 +39,10 @@
 
                     <img id="previous_pic" loading="lazy" src="../assets/dummy_pic/1.jpg"
                         alt="This is the description for sushi No.1" onclick=handleClickPhoto(this.alt)>
-                    <img id="current_pic" loading="lazy" src="../assets/dummy_pic/2.jpg" alt="This is the description for sushi No.2"
-                        onclick=handleClickPhoto(this.alt)>
-                    <img id="next_pic" src="../assets/dummy_pic/3.jpg" alt="This is the description for sushi No.3"
-                        onclick=handleClickPhoto(this.alt)>
+                    <img id="current_pic" loading="lazy" src="../assets/dummy_pic/2.jpg"
+                        alt="This is the description for sushi No.2" onclick=handleClickPhoto(this.alt)>
+                    <img id="next_pic" loading="lazy" src="../assets/dummy_pic/3.jpg"
+                        alt="This is the description for sushi No.3" onclick=handleClickPhoto(this.alt)>
                 </div>
 
             </div>
@@ -140,8 +140,8 @@
 
 
         if (window.innerWidth > 800) {
-            
-           
+
+
             prevPicSrc = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
             currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
             nextPicSrc = `../assets/dummy_pic/${(curr_idx + 2) % 38}.jpg`;
@@ -183,7 +183,7 @@
                     }
                 );
             });
-           
+
             nextPicRef.addEventListener('load', () => {
                 const next_pic_ani_exit = nextPicRef.animate(
                     [
@@ -275,7 +275,7 @@
                 prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2) % 38}.jpg`;
                 currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
                 nextPicSrc = `../assets/dummy_pic/${(curr_idx) % 38}.jpg`;
-                
+
                 currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % 38}`;
                 prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2) % 38}`;
                 nextPicRef.alt = `This is the description for sushi No.${(curr_idx) % 38}`;
@@ -286,8 +286,8 @@
 
             contentDiv.textContent = currPicRef.alt
 
-           
-            
+
+
             prevPicRef.addEventListener('load', () => {
                 const prev_pic_ani_exit = prevPicRef.animate(
                     [
@@ -324,7 +324,7 @@
                     }
                 );
             });
-            
+
             const contentDivAni = contentDiv.animate(
                 [
                     { opacity: 0 },
