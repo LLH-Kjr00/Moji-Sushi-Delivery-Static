@@ -28,7 +28,7 @@
                 <img class="cancel_icon" src="../assets/cancel.png" onclick=hideSidebar()>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../gallery/gallery_old.html">Gallery</a></li>
-                <li onclick=scrollToElement()><button class="contact" >Contact</button></li>
+                <li onclick=scrollToElement()><button class="contact">Contact</button></li>
             </ul>
         </header>
         <div class="container">
@@ -136,36 +136,37 @@
 
         let prevPicSrc, currPicSrc, nextPicSrc;
 
-        currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
-        currPicRef.src = currPicSrc;
-        currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % 38}`;
-        contentDiv.textContent = currPicRef.alt
-        currPicRef.addEventListener('load', () => {
-            const curr_pic_ani_exit = currPicRef.animate(
-                [
-                    { transform: 'translateX(-100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 1500,
-                    easing: 'ease-in-out',
-                }
-            );
-        });
-        const contentDivAni = contentDiv.animate(
-            [
-                { opacity: 0 },
-                { opacity: 1 }
-            ],
-            {
-                duration: 750,
-                easing: 'ease-in-out'
-            }
-        );
-        currPicRef.style.opacity = '1';
+
 
 
         if (window.innerWidth > 800) {
+            currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
+            currPicRef.src = currPicSrc;
+            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % 38}`;
+            contentDiv.textContent = currPicRef.alt
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(-100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+            const contentDivAni = contentDiv.animate(
+                [
+                    { opacity: 0 },
+                    { opacity: 1 }
+                ],
+                {
+                    duration: 750,
+                    easing: 'ease-in-out'
+                }
+            );
+            currPicRef.style.opacity = '1';
             prevPicSrc = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
             nextPicSrc = `../assets/dummy_pic/${(curr_idx + 2) % 38}.jpg`;
 
@@ -210,6 +211,35 @@
             prevPicRef.style.opacity = '1';
             nextPicRef.style.opacity = '1';
         }
+        else {
+            currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
+            currPicRef.src = currPicSrc;
+            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % 38}`;
+            contentDiv.textContent = currPicRef.alt
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(-100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+            const contentDivAni = contentDiv.animate(
+                [
+                    { opacity: 0 },
+                    { opacity: 1 }
+                ],
+                {
+                    duration: 750,
+                    easing: 'ease-in-out'
+                }
+            );
+            currPicRef.style.opacity = '1';
+        }
 
     }
 
@@ -228,59 +258,20 @@
 
         let prevPicSrc, currPicSrc, nextPicSrc;
 
-
-        if (curr_idx <= 1) {
-
-            currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
-            currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + 38) % 38}`;
-
-
-        }
-        else {
-            currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
-            currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % 38}`;
-
-
-        }
-
-        currPicRef.src = currPicSrc;
-
-        contentDiv.textContent = currPicRef.alt
-
-        currPicRef.addEventListener('load', () => {
-            const curr_pic_ani_exit = currPicRef.animate(
-                [
-                    { transform: 'translateX(100%)', opacity: 0 },
-                    { transform: 'translateX(0)', opacity: 1 },
-                ],
-                {
-                    duration: 1500,
-                    easing: 'ease-in-out',
-                }
-            );
-        });
-        const contentDivAni = contentDiv.animate(
-            [
-                { opacity: 0 },
-                { opacity: 1 }
-            ],
-            {
-                duration: 750,
-                easing: 'ease-in-out'
-            }
-        );
-        currPicRef.style.opacity = '1';
-
         if (window.innerWidth > 800) {
 
 
             if (curr_idx <= 1) {
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + 38) % 38}`;
                 prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2 + 38) % 38}.jpg`;
                 nextPicSrc = `../assets/dummy_pic/${(curr_idx + 38) % 38}.jpg`;
                 prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2 + 38) % 38}`;
                 nextPicRef.alt = `This is the description for sushi No.${(curr_idx + 38) % 38}`;
             }
             else {
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % 38}`;
                 prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2) % 38}.jpg`;
                 nextPicSrc = `../assets/dummy_pic/${(curr_idx) % 38}.jpg`;
                 prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2) % 38}`;
@@ -318,12 +309,55 @@
             nextPicRef.style.opacity = '1';
 
         }
+        else {
+            if (curr_idx <= 1) {
+
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + 38) % 38}.jpg`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + 38) % 38}`;
+
+
+            }
+            else {
+                currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % 38}.jpg`;
+                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % 38}`;
+
+
+            }
+
+            currPicRef.src = currPicSrc;
+
+            contentDiv.textContent = currPicRef.alt
+
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+            const contentDivAni = contentDiv.animate(
+                [
+                    { opacity: 0 },
+                    { opacity: 1 }
+                ],
+                {
+                    duration: 750,
+                    easing: 'ease-in-out'
+                }
+            );
+            currPicRef.style.opacity = '1';
+        }
 
     }
 
-    function scrollToElement(){
+    function scrollToElement() {
         var elmnt = document.getElementsByClassName("second_page")[0];
-        elmnt.scrollIntoView({behavior:'smooth', block:"start"});//, block:'center', inline:'center'});
+        elmnt.scrollIntoView({ behavior: 'smooth', block: "start" });//, block:'center', inline:'center'});
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.right = "-100vw"
     }
