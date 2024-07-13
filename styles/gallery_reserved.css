@@ -1,0 +1,133 @@
+.first_page {
+  background-size: cover;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
+    url("../assets/background/sushi\ \(2\).png");
+  background-position: center;
+}
+
+.title {
+  font-family: "brush";
+  font-size: 55px;
+  color: white;
+  padding: 5vh;
+  padding-top: 2vh;
+}
+
+.slide-container {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.slider-wrapper .image-list {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  font-size: 0;
+  margin-bottom: 2vh;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-wrapper .image-list::-moz-scrollbar {
+  display: none;
+}
+
+.contain_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+  color: white
+}
+
+.slide-button {
+  height: 8vh;
+  width: 8vh;
+  cursor: pointer;
+  align-items: center;
+  margin: 3vh;
+  user-select: none;
+}
+
+#prev-slide {
+  transform: rotateY(180deg);
+}
+
+.slider-wrapper .image-list .image-item {
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+  margin: 2vh;
+}
+
+.slider-wrapper .image-list :first-child {
+  margin-left: 0vh;
+}
+
+.slider-wrapper .image-list :last-child {
+  margin-right: 0vh;
+}
+
+.slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  height: 6px;
+  width: 100%;
+  background-color:rgba(255,255,255,0.6);
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  height: 6px;
+  width: 25%;
+  position: relative;
+  background-color: rgba(22, 23, 23, 0.6);
+  border-radius: inherit;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  user-select: none;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+
+
+
+@media(max-width: 800px) {
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 25/4%
+  }
+
+}
+
+@font-face {
+  font-family: "paint";
+  src: url("../assets/special_font/PAINP___.TTF") format('truetype')
+}

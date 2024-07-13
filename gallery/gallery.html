@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/globel.css">
-    <link rel="stylesheet" href="../styles/gallery_old.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,9 +140,7 @@
 
 
         if (window.innerWidth > 800) {
-            currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
-            currPicRef.src = currPicSrc;
-            contentDiv.textContent = currPicRef.alt
+            
            
             prevPicSrc = `../assets/dummy_pic/${curr_idx % 38}.jpg`;
             currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % 38}.jpg`;
@@ -157,6 +155,7 @@
             nextPicRef.alt = `This is the description for sushi No.${(curr_idx + 2) % 38}`;
 
 
+            contentDiv.textContent = currPicRef.alt
 
 
             prevPicRef.addEventListener('load', () => {
