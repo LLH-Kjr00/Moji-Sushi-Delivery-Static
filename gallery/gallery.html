@@ -37,12 +37,9 @@
 
                 <div class='images'>
 
-                    <img id="previous_pic" loading="eager" src="../assets/dummy_pic/1.jpg"
-                        alt="This is the description for sushi No.1">
-                    <img id="current_pic" loading="eager" src="../assets/dummy_pic/2.jpg"
-                        alt="This is the description for sushi No.2">
-                    <img id="next_pic" loading="eager" src="../assets/dummy_pic/3.jpg"
-                        alt="This is the description for sushi No.3">
+                    <img id="previous_pic" loading="eager" src="../assets/dummy_pic/1.jpg">
+                    <img id="current_pic" loading="eager" src="../assets/dummy_pic/2.jpg">
+                    <img id="next_pic" loading="eager" src="../assets/dummy_pic/3.jpg">
                 </div>
 
             </div>
@@ -50,9 +47,7 @@
 
                 <img class="slide-button" id="prev-slide" src="../assets/new_arrow.png" alt="previous arrow icon"
                     onclick=change_pic_next()>
-                <div class="description">
-                    This is the description for sushi No.2
-                </div>
+
 
                 <img class="slide-button" id="next-slide" src="../assets/new_arrow.png" alt="next arrow icon"
                     onclick=change_pic_prev()>
@@ -117,7 +112,6 @@
     let prevPicRef, currPicRef, nextPicRef;
     const maximum_num = 13;
     const window_width = window.innerWidth;
-    const contentDiv = document.querySelector('.description');
 
 
     function change_pic_next() {
@@ -152,12 +146,7 @@
             currPicRef.src = currPicSrc;
             nextPicRef.src = nextPicSrc;
 
-            prevPicRef.alt = `This is the description for sushi No.${curr_idx % maximum_num}`;
-            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % maximum_num}`;
-            nextPicRef.alt = `This is the description for sushi No.${(curr_idx + 2) % maximum_num}`;
 
-
-            contentDiv.textContent = currPicRef.alt
 
 
             prevPicRef.addEventListener('load', () => {
@@ -199,16 +188,7 @@
                 );
             });
 
-            const contentDivAni = contentDiv.animate(
-                [
-                    { opacity: 0 },
-                    { opacity: 1 }
-                ],
-                {
-                    duration: 750,
-                    easing: 'ease-in-out'
-                }
-            );
+            
 
             prevPicRef.style.opacity = '0.7';
             currPicRef.style.opacity = '1';
@@ -217,8 +197,6 @@
         else {
             currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % maximum_num}.jpg`;
             currPicRef.src = currPicSrc;
-            currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % maximum_num}`;
-            contentDiv.textContent = currPicRef.alt
             currPicRef.addEventListener('load', () => {
                 const curr_pic_ani_exit = currPicRef.animate(
                     [
@@ -231,16 +209,7 @@
                     }
                 );
             });
-            const contentDivAni = contentDiv.animate(
-                [
-                    { opacity: 0 },
-                    { opacity: 1 }
-                ],
-                {
-                    duration: 750,
-                    easing: 'ease-in-out'
-                }
-            );
+       
             currPicRef.style.opacity = '1';
         }
 
@@ -269,24 +238,19 @@
                 currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + maximum_num) % maximum_num}.jpg`;
                 nextPicSrc = `../assets/dummy_pic/${(curr_idx + maximum_num) % maximum_num}.jpg`;
 
-                prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2 + maximum_num) % maximum_num}`;
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + maximum_num) % maximum_num}`;
-                nextPicRef.alt = `This is the description for sushi No.${(curr_idx + maximum_num) % maximum_num}`;
+
             }
             else {
                 prevPicSrc = `../assets/dummy_pic/${(curr_idx - 2) % maximum_num}.jpg`;
                 currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % maximum_num}.jpg`;
                 nextPicSrc = `../assets/dummy_pic/${(curr_idx) % maximum_num}.jpg`;
 
-                prevPicRef.alt = `This is the description for sushi No.${(curr_idx - 2) % maximum_num}`;
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % maximum_num}`;
-                nextPicRef.alt = `This is the description for sushi No.${(curr_idx) % maximum_num}`;
+
             }
             currPicRef.src = currPicSrc;
             prevPicRef.src = prevPicSrc;
             nextPicRef.src = nextPicSrc;
 
-            contentDiv.textContent = currPicRef.alt
 
 
 
@@ -327,16 +291,7 @@
                 );
             });
 
-            const contentDivAni = contentDiv.animate(
-                [
-                    { opacity: 0 },
-                    { opacity: 1 }
-                ],
-                {
-                    duration: 750,
-                    easing: 'ease-in-out'
-                }
-            );
+           
             prevPicRef.style.opacity = '0.7';
             currPicRef.style.opacity = '1';
             nextPicRef.style.opacity = '0.7';
@@ -346,20 +301,17 @@
             if (curr_idx <= 1) {
 
                 currPicSrc = `../assets/dummy_pic/${(curr_idx - 1 + maximum_num) % maximum_num}.jpg`;
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1 + maximum_num) % maximum_num}`;
 
 
             }
             else {
                 currPicSrc = `../assets/dummy_pic/${(curr_idx - 1) % maximum_num}.jpg`;
-                currPicRef.alt = `This is the description for sushi No.${(curr_idx - 1) % maximum_num}`;
 
 
             }
 
             currPicRef.src = currPicSrc;
 
-            contentDiv.textContent = currPicRef.alt
 
             currPicRef.addEventListener('load', () => {
                 const curr_pic_ani_exit = currPicRef.animate(
@@ -373,16 +325,7 @@
                     }
                 );
             });
-            const contentDivAni = contentDiv.animate(
-                [
-                    { opacity: 0 },
-                    { opacity: 1 }
-                ],
-                {
-                    duration: 750,
-                    easing: 'ease-in-out'
-                }
-            );
+           
             currPicRef.style.opacity = '1';
         }
 

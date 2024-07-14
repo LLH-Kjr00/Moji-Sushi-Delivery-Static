@@ -57,6 +57,7 @@
 
 .first_page {
     position: relative;
+    align-items: center;
 }
 
 .content_wrapper {
@@ -65,11 +66,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.description {
-    color: white
 }
 
 .slide-button {
