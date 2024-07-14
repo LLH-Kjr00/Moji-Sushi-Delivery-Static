@@ -33,29 +33,30 @@
         </header>
         <div class="container">
             <h1 class='title'>Gallery</h1>
-            <div class="gallery">
+            <div class="display_frame">
 
-                <div class='gallery_container'>
+                <div class='images'>
 
-                    <img class="gallery_item gallery_item_1" id="previous_pic" loading="lazy"
-                        src="../assets/dummy_pic/1.jpg" alt="This is the description for sushi No.1">
-                    <img class="gallery_item gallery_item_2" id="current_pic" loading="lazy"
-                        src="../assets/dummy_pic/2.jpg" alt="This is the description for sushi No.2">
-                    <img class="gallery_item gallery_item_3" id="next_pic" loading="lazy"
-                        src="../assets/dummy_pic/3.jpg" alt="This is the description for sushi No.3">
+                    <img id="previous_pic" loading="lazy" src="../assets/dummy_pic/1.jpg"
+                        alt="This is the description for sushi No.1">
+                    <img id="current_pic" loading="lazy" src="../assets/dummy_pic/2.jpg"
+                        alt="This is the description for sushi No.2">
+                    <img id="next_pic" loading="lazy" src="../assets/dummy_pic/3.jpg"
+                        alt="This is the description for sushi No.3">
                 </div>
 
             </div>
-            <div class="gallery_controls">
-                <img class="slide_button gallery_controls_previous" id="prev_slide" src="../assets/new_arrow.png"
-                    alt="previous arrow icon" onclick="changePicture('prev')">
+            <div class="content_wrapper">
+
+                <img class="slide-button" id="prev-slide" src="../assets/new_arrow.png" alt="previous arrow icon"
+                    onclick=change_pic_next()>
                 <div class="description">
                     This is the description for sushi No.2
                 </div>
-                <img class="slide_button gallery_controls_next" id="next_slide" src="../assets/new_arrow.png"
-                    alt="next arrow icon" onclick="changePicture('next')">
-            </div>
 
+                <img class="slide-button" id="next-slide" src="../assets/new_arrow.png" alt="next arrow icon"
+                    onclick=change_pic_prev()>
+            </div>
 
         </div>
     </div>
@@ -100,17 +101,6 @@
 </html>
 
 <script>
-
-    const gallery_Container = document.querySelector('.gallery_container');
-    const gallery_Controls = document.querySelector('.gallery_controls');
-    const gallery_Icons = ['previous', 'next'];
-    const gallery_Items = document.querySelectorAll('.gallery_item');
-
-    let prevPicRef, currPicRef, nextPicRef;
-    const maximum_num = 13;
-    const window_width = window.innerWidth;
-    const contentDiv = document.querySelector('.description');
-
     function showSidebar() {
         const sidebar = document.querySelector('.sidebar')
         /*sidebar.style.display = "flex"*/
@@ -123,24 +113,12 @@
         sidebar.style.right = "-100vw"
 
     }
-    function scrollToElement() {
-        var elmnt = document.getElementsByClassName("second_page")[0];
-        elmnt.scrollIntoView({ behavior: 'smooth', block: "start" });//, block:'center', inline:'center'});
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.right = "-100vw"
-    }
 
-    function changePicture(direction) {
-        const currentPic = document.getElementById('current_pic');
-        const nextPic = document.getElementById('next_pic');
-        const prevPic = document.getElementById('previous_pic');
+    let prevPicRef, currPicRef, nextPicRef;
+    const maximum_num = 13;
+    const window_width = window.innerWidth;
+    const contentDiv = document.querySelector('.description');
 
-        if (direction === 'next') {
-            change_pic_next()
-        } else {
-            change_pic_prev()
-        }
-    }
 
     function change_pic_next() {
 
@@ -182,7 +160,44 @@
             contentDiv.textContent = currPicRef.alt
 
 
-           
+            prevPicRef.addEventListener('load', () => {
+                const prev_pic_ani_exit = prevPicRef.animate(
+                    [
+                        { transform: 'translateX(100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
+                    ],
+                    {
+                        duration: 1000,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+
+            nextPicRef.addEventListener('load', () => {
+                const next_pic_ani_exit = nextPicRef.animate(
+                    [
+                        { transform: 'translateX(100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
+                    ],
+                    {
+                        duration: 2000,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
 
             const contentDivAni = contentDiv.animate(
                 [
@@ -195,16 +210,27 @@
                 }
             );
 
-            prevPicRef.style.opacity = '0.7';
+            prevPicRef.style.opacity = '0.5';
             currPicRef.style.opacity = '1';
-            nextPicRef.style.opacity = '0.7';
+            nextPicRef.style.opacity = '0.5';
         }
         else {
             currPicSrc = `../assets/dummy_pic/${(curr_idx + 1) % maximum_num}.jpg`;
             currPicRef.src = currPicSrc;
             currPicRef.alt = `This is the description for sushi No.${(curr_idx + 1) % maximum_num}`;
             contentDiv.textContent = currPicRef.alt
-           
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
             const contentDivAni = contentDiv.animate(
                 [
                     { opacity: 0 },
@@ -264,7 +290,42 @@
 
 
 
-            
+            prevPicRef.addEventListener('load', () => {
+                const prev_pic_ani_exit = prevPicRef.animate(
+                    [
+                        { transform: 'translateX(-100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
+                    ],
+                    {
+                        duration: 1000,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(-100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
+            nextPicRef.addEventListener('load', () => {
+                const next_pic_ani_exit = nextPicRef.animate(
+                    [
+                        { transform: 'translateX(-100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 0.5 },
+                    ],
+                    {
+                        duration: 2000,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
 
             const contentDivAni = contentDiv.animate(
                 [
@@ -300,7 +361,18 @@
 
             contentDiv.textContent = currPicRef.alt
 
-           
+            currPicRef.addEventListener('load', () => {
+                const curr_pic_ani_exit = currPicRef.animate(
+                    [
+                        { transform: 'translateX(-100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 },
+                    ],
+                    {
+                        duration: 1500,
+                        easing: 'ease-in-out',
+                    }
+                );
+            });
             const contentDivAni = contentDiv.animate(
                 [
                     { opacity: 0 },
@@ -315,5 +387,15 @@
         }
 
     }
+
+    function scrollToElement() {
+        var elmnt = document.getElementsByClassName("second_page")[0];
+        elmnt.scrollIntoView({ behavior: 'smooth', block: "start" });//, block:'center', inline:'center'});
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.right = "-100vw"
+    }
+
+    
+
 
 </script>
