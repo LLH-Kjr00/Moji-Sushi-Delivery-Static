@@ -5,9 +5,12 @@
             rgba(0, 0, 0, 0.5)),
         url("../assets/background/sushi\ \(2\).png");
     height: 100vh;
+
 }
-
-
+.container {
+    display: flex;
+    flex-direction: column;
+}
 
 .title {
     font-family: "brush";
@@ -17,23 +20,34 @@
     padding-top: 2vh;
 }
 
-.display_frame {
+.gallery_content {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.images {
-    display: flex;
-    flex-direction: row;
+
+
+.gallery {
+    width: 100%;
     align-items: center;
 
 }
 
-.images img {
+.gallery_container {
+    display: flex;
+    height: 20vh;
+    margin: 0 auto;
+    position: relative
+}
+
+.gallery_item {
     height: 60vh;
     width: 60vh;
-    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    background-size: contain;
 
 }
 
@@ -41,25 +55,28 @@
 #next_pic {
     height: 50vh;
     width: 50vh;
-    opacity: 0.5;
+    opacity: 0.7;
+    z-index: 1;
 }
 
-.arrows {
-    height: 30vh;
-    width: 20vh;
+#previous_pic {
+    left: 30%;
+    transform: translateX(-50%)
 }
 
-#prev-slide {
-    transform: rotateY(180deg);
+#current_pic {
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
-
-
-.first_page {
-    position: relative;
+#next_pic {
+    left: 70%;
+    transform: translateX(-50%);
 }
 
-.content_wrapper {
+.gallery_controls {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -72,7 +89,7 @@
     color: white
 }
 
-.slide-button {
+.slide_button {
     height: 8vh;
     width: 8vh;
     cursor: pointer;
@@ -81,24 +98,6 @@
     user-select: none;
 }
 
-@media(max-width: 800px) {
-
-    .images img {
-        height: 45vh;
-        width: 45vh;
-        padding: 3%;
-        object-fit: fill;
-
-    }
-
-    #previous_pic,
-    #next_pic {
-        display: none;
-    }
-}
-
-
-@font-face {
-    font-family: "paint";
-    src: url("../assets/special_font/PAINP___.TTF") format('truetype')
+#prev_slide {
+    transform: rotateY(180deg);
 }
