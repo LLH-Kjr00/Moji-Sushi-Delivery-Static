@@ -91,6 +91,11 @@
     #next_pic {
         display: none;
     }
+
+    .content_wrapper {
+        bottom: 10%;
+    }
+    
 }
 
 
