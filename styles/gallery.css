@@ -77,6 +77,16 @@
     user-select: none;
 }
 
+
+
+
+.order_container{
+    background-color: rgba(61, 167, 167,1);
+
+}
+
+
+
 @media(max-width: 800px) {
 
     .images img {
